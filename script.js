@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     pin: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
     arrowUp: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>`,
     corner: `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-      <g opacity="0.18">
+      <g opacity="0.55">
         <!-- Rose 1 -->
         <g transform="translate(60,60)">
           <ellipse cx="0" cy="0" rx="22" ry="18" fill="#C4848A" opacity="0.7"/>
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <!-- Navigation -->
     <nav class="nav" id="navbar">
       <div class="container">
-        <span class="nav-brand">La Maison de Tante Rose</span>
+        <a href="#" class="nav-brand" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">La Maison de Tante Rose</a>
         <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
         <ul class="nav-links">
           <li><a href="#checkin">${t(T.nav.checkin)}</a></li>

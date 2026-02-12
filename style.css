@@ -407,6 +407,12 @@ p {
   color: var(--charcoal);
   font-weight: 500;
   letter-spacing: 0.04em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-brand:hover {
+  color: var(--rose);
 }
 
 .nav.scrolled .nav-brand {
