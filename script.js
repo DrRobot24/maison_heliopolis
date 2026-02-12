@@ -11,7 +11,42 @@ document.addEventListener('DOMContentLoaded', () => {
     rose: `<svg class="rose-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C9.5 2 7.5 4 7.5 6.5c0 1.5.7 2.8 1.8 3.7C7.2 11.3 6 13.5 6 16c0 3.3 2.7 6 6 6s6-2.7 6-6c0-2.5-1.2-4.7-3.3-5.8 1.1-.9 1.8-2.2 1.8-3.7C16.5 4 14.5 2 12 2zm0 2c1.4 0 2.5 1.1 2.5 2.5S13.4 9 12 9s-2.5-1.1-2.5-2.5S10.6 4 12 4z"/></svg>`,
     pin: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
     arrowUp: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>`,
-    corner: `<svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1"><path d="M10 80 C 30 10, 80 10, 100 30 S 170 50, 180 100" opacity="0.6"/><circle cx="95" cy="25" r="12" fill="currentColor" opacity="0.3"/><circle cx="60" cy="15" r="8" fill="currentColor" opacity="0.2"/><path d="M5 120 C 15 60, 50 40, 70 55" opacity="0.4"/><circle cx="30" cy="45" r="5" fill="currentColor" opacity="0.15"/><path d="M60 5 C 80 20, 90 50, 75 70" opacity="0.3"/></svg>`
+    corner: `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+      <g opacity="0.18">
+        <!-- Rose 1 -->
+        <g transform="translate(60,60)">
+          <ellipse cx="0" cy="0" rx="22" ry="18" fill="#C4848A" opacity="0.7"/>
+          <ellipse cx="5" cy="-5" rx="16" ry="13" fill="#D4A0A4" opacity="0.6"/>
+          <ellipse cx="-3" cy="3" rx="18" ry="14" fill="#C4848A" opacity="0.5"/>
+          <ellipse cx="0" cy="0" rx="10" ry="8" fill="#E8B4B8" opacity="0.8"/>
+          <ellipse cx="0" cy="0" rx="5" ry="4" fill="#F0D4D8"/>
+        </g>
+        <!-- Rose 2 -->
+        <g transform="translate(120,35) scale(0.7)">
+          <ellipse cx="0" cy="0" rx="22" ry="18" fill="#C4848A" opacity="0.6"/>
+          <ellipse cx="4" cy="-4" rx="14" ry="11" fill="#D4A0A4" opacity="0.5"/>
+          <ellipse cx="0" cy="0" rx="8" ry="6" fill="#E8B4B8" opacity="0.8"/>
+          <ellipse cx="0" cy="0" rx="4" ry="3" fill="#F0D4D8"/>
+        </g>
+        <!-- Rose 3 (bud) -->
+        <g transform="translate(30,110) scale(0.5)">
+          <ellipse cx="0" cy="0" rx="16" ry="12" fill="#C4848A" opacity="0.5"/>
+          <ellipse cx="0" cy="0" rx="8" ry="6" fill="#E8B4B8" opacity="0.7"/>
+        </g>
+        <!-- Stems -->
+        <path d="M60 78 C 55 120, 70 160, 90 200" stroke="#8B9E7E" stroke-width="2" fill="none" opacity="0.5"/>
+        <path d="M84 49 C 100 80, 95 120, 90 200" stroke="#8B9E7E" stroke-width="1.5" fill="none" opacity="0.4"/>
+        <path d="M30 116 C 40 140, 60 170, 90 200" stroke="#8B9E7E" stroke-width="1.5" fill="none" opacity="0.35"/>
+        <!-- Leaves -->
+        <path d="M52 100 C 30 95, 20 110, 40 115 C 30 105, 38 98, 52 100Z" fill="#8B9E7E" opacity="0.4"/>
+        <path d="M92 90 C 110 80, 120 95, 105 102 C 115 88, 100 85, 92 90Z" fill="#A8B89D" opacity="0.35"/>
+        <path d="M75 140 C 55 132, 45 145, 62 150 C 50 138, 60 135, 75 140Z" fill="#8B9E7E" opacity="0.3"/>
+        <path d="M95 130 C 115 125, 125 138, 108 143 C 120 128, 105 127, 95 130Z" fill="#A8B89D" opacity="0.3"/>
+        <!-- Small buds -->
+        <circle cx="100" cy="65" r="5" fill="#E8B4B8" opacity="0.3"/>
+        <circle cx="40" cy="80" r="4" fill="#D4A0A4" opacity="0.25"/>
+      </g>
+    </svg>`
   };
 
   // Auto-detect language first

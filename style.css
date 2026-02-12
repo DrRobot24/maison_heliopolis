@@ -517,33 +517,58 @@ p {
 /* Floral corner decorations */
 .hero-corner {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   pointer-events: none;
-  opacity: 0.15;
+  opacity: 1;
 }
 
 .hero-corner--tl {
-  top: 0;
-  left: 0;
+  top: -20px;
+  left: -20px;
 }
 
 .hero-corner--tr {
-  top: 0;
-  right: 0;
+  top: -20px;
+  right: -20px;
   transform: scaleX(-1);
 }
 
 .hero-corner--bl {
-  bottom: 0;
-  left: 0;
+  bottom: -20px;
+  left: -20px;
   transform: scaleY(-1);
 }
 
 .hero-corner--br {
-  bottom: 0;
-  right: 0;
+  bottom: -20px;
+  right: -20px;
   transform: scale(-1);
+}
+
+/* Rose overlay pattern on hero */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(ellipse 60px 50px at 15% 20%, rgba(196, 132, 138, 0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 40px 35px at 85% 15%, rgba(196, 132, 138, 0.05) 0%, transparent 70%),
+    radial-gradient(ellipse 50px 45px at 75% 80%, rgba(196, 132, 138, 0.04) 0%, transparent 70%),
+    radial-gradient(ellipse 35px 30px at 25% 75%, rgba(196, 132, 138, 0.05) 0%, transparent 70%),
+    radial-gradient(ellipse 45px 40px at 50% 50%, rgba(196, 132, 138, 0.03) 0%, transparent 70%);
+  z-index: 1;
+}
+
+/* Rose accent border on sections */
+.section--cream::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 10%, var(--rose-light) 30%, var(--rose) 50%, var(--rose-light) 70%, transparent 90%);
+  opacity: 0.3;
+  margin-bottom: 0;
 }
 
 .hero-content {
