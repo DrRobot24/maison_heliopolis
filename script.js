@@ -6,6 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentLang = 'it';
   let abortCtrl = null;
 
+  // SVG Icons (top-level scope)
+  const SVG = {
+    rose: `<svg class="rose-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C9.5 2 7.5 4 7.5 6.5c0 1.5.7 2.8 1.8 3.7C7.2 11.3 6 13.5 6 16c0 3.3 2.7 6 6 6s6-2.7 6-6c0-2.5-1.2-4.7-3.3-5.8 1.1-.9 1.8-2.2 1.8-3.7C16.5 4 14.5 2 12 2zm0 2c1.4 0 2.5 1.1 2.5 2.5S13.4 9 12 9s-2.5-1.1-2.5-2.5S10.6 4 12 4z"/></svg>`,
+    pin: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
+    arrowUp: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>`,
+    corner: `<svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1"><path d="M10 80 C 30 10, 80 10, 100 30 S 170 50, 180 100" opacity="0.6"/><circle cx="95" cy="25" r="12" fill="currentColor" opacity="0.3"/><circle cx="60" cy="15" r="8" fill="currentColor" opacity="0.2"/><path d="M5 120 C 15 60, 50 40, 70 55" opacity="0.4"/><circle cx="30" cy="45" r="5" fill="currentColor" opacity="0.15"/><path d="M60 5 C 80 20, 90 50, 75 70" opacity="0.3"/></svg>`
+  };
+
   // Auto-detect language first
   const saved = localStorage.getItem('tanterose_lang');
   if (saved && ['it', 'en', 'fr', 'es'].includes(saved)) currentLang = saved;
@@ -84,14 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (abortCtrl) abortCtrl.abort();
     abortCtrl = new AbortController();
     const sig = { signal: abortCtrl.signal };
-
-    // SVG Icons
-    const SVG = {
-      rose: `<svg class="rose-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C9.5 2 7.5 4 7.5 6.5c0 1.5.7 2.8 1.8 3.7C7.2 11.3 6 13.5 6 16c0 3.3 2.7 6 6 6s6-2.7 6-6c0-2.5-1.2-4.7-3.3-5.8 1.1-.9 1.8-2.2 1.8-3.7C16.5 4 14.5 2 12 2zm0 2c1.4 0 2.5 1.1 2.5 2.5S13.4 9 12 9s-2.5-1.1-2.5-2.5S10.6 4 12 4z"/></svg>`,
-      pin: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
-      arrowUp: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>`,
-      corner: `<svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1"><path d="M10 80 C 30 10, 80 10, 100 30 S 170 50, 180 100" opacity="0.6"/><circle cx="95" cy="25" r="12" fill="currentColor" opacity="0.3"/><circle cx="60" cy="15" r="8" fill="currentColor" opacity="0.2"/><path d="M5 120 C 15 60, 50 40, 70 55" opacity="0.4"/><circle cx="30" cy="45" r="5" fill="currentColor" opacity="0.15"/><path d="M60 5 C 80 20, 90 50, 75 70" opacity="0.3"/></svg>`
-    };
 
     const app = document.getElementById('app');
     app.innerHTML = `
