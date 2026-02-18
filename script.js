@@ -96,7 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="checkin-landing__corner checkin-landing__corner--br">${SVG.corner}</div>
 
       <div class="checkin-landing__card">
-        <div class="checkin-landing__brand">🌹 La Maison de Tante Rose</div>
+        <img src="public/logo.jpeg" alt="La Maison de Tante Rose" class="checkin-landing__logo">
+        <div class="checkin-landing__brand">La Maison de Tante Rose</div>
         <div class="checkin-landing__room-badge">${roomDisplayName(checkinRoom)}</div>
         <h1 class="checkin-landing__title">${t(T.checkin.title)}</h1>
         <p class="checkin-landing__subtitle">${t(T.checkin.subtitle)}</p>
@@ -169,6 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="hero-corner hero-corner--bl">${SVG.corner}</div>
       <div class="hero-corner hero-corner--br">${SVG.corner}</div>
       <div class="hero-content">
+        <img src="public/logo.jpeg" alt="La Maison de Tante Rose" class="hero-logo">
         <p class="hero-eyebrow">${t(T.hero.eyebrow)}</p>
         <h1>La Maison de Tante Rose</h1>
         <p class="hero-tagline">${t(T.hero.tagline)}</p>
@@ -294,14 +296,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const step3title = T.checkin[prefix + 'step3title'] || T.checkin.step3title;
     const step3text  = T.checkin[prefix + 'step3text']  || T.checkin.step3text;
 
+    // Photo paths per room
+    const photos = {
+      rosa: { step2: 'public/rosa%201.jpeg', step3: 'public/rosa%202.jpeg' },
+      verte: { step2: 'public/verte1.jpeg', step3: 'public/verte%202.jpeg' }
+    };
+    const roomPhotos = photos[room] || photos.rosa;
+
     return [
-      { n: 1, title: t(step1title), text: t(step1text) },
-      { n: 2, title: t(step2title), text: t(step2text) },
-      { n: 3, title: t(step3title), text: t(step3text) }
+      { n: 1, title: t(step1title), text: t(step1text), img: null },
+      { n: 2, title: t(step2title), text: t(step2text), img: roomPhotos.step2 },
+      { n: 3, title: t(step3title), text: t(step3text), img: roomPhotos.step3 }
     ].map(s => `
       <div class="step">
         <div class="step-number">${s.n}</div>
-        <div class="step-content"><h4>${s.title}</h4><p>${s.text}</p></div>
+        <div class="step-content">
+          <h4>${s.title}</h4>
+          <p>${s.text}</p>
+          ${s.img ? `<img src="${s.img}" alt="Step ${s.n}" class="step-photo">` : ''}
+        </div>
       </div>`).join('');
   }
 

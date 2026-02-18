@@ -146,6 +146,17 @@ a:hover {
   margin-bottom: 12px;
 }
 
+.checkin-landing__logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  box-shadow: 0 6px 20px rgba(196, 163, 90, 0.2);
+  margin: 0 auto 16px;
+  display: block;
+}
+
 .checkin-landing__room-badge {
   display: inline-block;
   padding: 8px 24px;
@@ -628,6 +639,17 @@ p {
   font-weight: 400;
 }
 
+.hero-logo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  box-shadow: 0 8px 30px rgba(196, 163, 90, 0.25);
+  margin: 0 auto 28px;
+  display: block;
+}
+
 .hero h1 {
   color: var(--charcoal);
   margin-bottom: 16px;
@@ -851,6 +873,15 @@ p {
   font-size: 0.95rem;
   line-height: 1.7;
   margin-bottom: 0;
+}
+
+.step-photo {
+  margin-top: 12px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 16px rgba(44, 44, 44, 0.1);
+  border: 2px solid var(--beige);
 }
 
 /* ============================================
