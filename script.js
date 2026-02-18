@@ -26,7 +26,43 @@ document.addEventListener('DOMContentLoaded', () => {
     pin: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
     arrowUp: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>`,
     key: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>`,
-    corner: `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+    noPets: `<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <!-- Dog silhouette -->
+      <g fill="#8B6F5E">
+        <!-- Body -->
+        <ellipse cx="30" cy="38" rx="12" ry="8"/>
+        <!-- Head -->
+        <circle cx="18" cy="30" r="7"/>
+        <!-- Ear -->
+        <ellipse cx="14" cy="24" rx="3.5" ry="5" transform="rotate(-20 14 24)"/>
+        <!-- Snout -->
+        <ellipse cx="13" cy="33" rx="4" ry="2.5"/>
+        <!-- Tail -->
+        <path d="M42 34 Q48 28 46 22" stroke="#8B6F5E" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <!-- Front legs -->
+        <rect x="22" y="43" width="3" height="8" rx="1.5"/>
+        <rect x="28" y="43" width="3" height="8" rx="1.5"/>
+        <!-- Back legs -->
+        <rect x="34" y="43" width="3" height="8" rx="1.5"/>
+        <rect x="39" y="43" width="3" height="8" rx="1.5"/>
+      </g>
+      <!-- Nose -->
+      <circle cx="11" cy="32" r="1.5" fill="#333"/>
+      <!-- Eye -->
+      <circle cx="16" cy="28" r="1.2" fill="#333"/>
+      <!-- Prohibition circle -->
+      <circle cx="32" cy="32" r="28" fill="none" stroke="#C0392B" stroke-width="4"/>
+      <!-- Prohibition line -->
+      <line x1="12" y1="12" x2="52" y2="52" stroke="#C0392B" stroke-width="4" stroke-linecap="round"/>
+    </svg>`,    emergency: `<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+      <!-- Police shield -->
+      <path d="M14 6 L24 3 L34 6 L34 22 C34 30 24 36 24 36 C24 36 14 30 14 22 Z" fill="#2C5AA0" stroke="#1A3D6E" stroke-width="1.5"/>
+      <path d="M20 14 h8 v4 h4 v8 h-4 v4 h-8 v-4 h-4 v-8 h4 z" fill="#FFFFFF"/>
+      <!-- Red cross (ambulance) -->
+      <circle cx="36" cy="36" r="10" fill="#E74C3C"/>
+      <rect x="33" y="30" width="6" height="12" rx="1" fill="#FFFFFF"/>
+      <rect x="30" y="33" width="12" height="6" rx="1" fill="#FFFFFF"/>
+    </svg>`,    corner: `<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
       <g opacity="0.55">
         <g transform="translate(60,60)">
           <ellipse cx="0" cy="0" rx="22" ry="18" fill="#C4848A" opacity="0.7"/>
@@ -120,6 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
 
       <footer class="checkin-landing__footer">
+        <div class="footer-cin">CIN: IT089017C2ZYR6XK4D</div>
         <p>${t(T.checkinLanding.footer)}</p>
       </footer>
     </div>`;
@@ -157,6 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <li><a href="#checkout">${t(T.nav.checkout)}</a></li>
           <li><a href="#rules">${t(T.nav.rules)}</a></li>
           <li><a href="#explore">${t(T.nav.explore)}</a></li>
+          <li><a href="#experiences">${t(T.nav.experiences)}</a></li>
           <li><a href="#eat">${t(T.nav.eat)}</a></li>
           <li><a href="#contacts">${t(T.nav.contacts)}</a></li>
         </ul>
@@ -175,6 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <h1>La Maison de Tante Rose</h1>
         <p class="hero-tagline">${t(T.hero.tagline)}</p>
         <div class="hero-location">${SVG.pin} ${t(T.hero.location)}</div>
+        <div class="hero-cin">CIN: IT089017C2ZYR6XK4D</div>
         <p class="section-subtitle" style="margin-bottom:20px">${t(T.hero.selectLang)}</p>
         <div class="lang-selector">
           <button class="lang-btn ${currentLang === 'it' ? 'active' : ''}" data-set-lang="it">🇮🇹 Italiano</button>
@@ -211,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="section-header reveal"><h2>${t(T.rules.title)}</h2><p class="section-subtitle">${t(T.rules.subtitle)}</p></div>
         <div class="rules-grid reveal">${T.rules.items.map(r => `
           <div class="rule-item">
-            <div class="rule-icon">${r.icon}</div>
+            <div class="rule-icon">${r.icon === 'no-pets-svg' ? SVG.noPets : r.icon}</div>
             <div><h4>${t(r.title)}</h4><p>${t(r.desc)}</p></div>
           </div>`).join('')}
         </div>
@@ -234,6 +273,25 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>${t(l.desc)}</p>
           </div>`).join('')}
         </div>
+      </div>
+    </section>
+
+    <!-- Experiences -->
+    <section class="section section--white" id="experiences">
+      <div class="container">
+        <div class="section-header reveal"><h2>${t(T.experiences.title)}</h2><p class="section-subtitle">${t(T.experiences.subtitle)}</p></div>
+        ${T.experiences.items.map(exp => `
+          <div class="experience-card reveal">
+            <div class="experience-card__icon">${exp.emoji}</div>
+            <div class="experience-card__content">
+              <h3>${t(exp.title)}</h3>
+              <p class="experience-card__desc">${t(exp.desc)}</p>
+              <p class="experience-card__details">${t(exp.details)}</p>
+              <div class="experience-card__cta">
+                <span>📞</span> ${t(exp.cta)}
+              </div>
+            </div>
+          </div>`).join('')}
       </div>
     </section>
 
@@ -261,10 +319,26 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="section-header reveal"><h2>${t(T.contacts.title)}</h2><p class="section-subtitle">${t(T.contacts.subtitle)}</p></div>
         <div class="contacts-grid reveal">${T.contacts.items.map(c => `
           <div class="contact-card">
-            <div class="icon">${c.icon}</div>
+            <div class="icon">${c.icon === 'emergency-svg' ? SVG.emergency : c.icon}</div>
             <h4>${t(c.title)}</h4>
             <p><a href="${c.link}" class="phone-link">${c.value}</a></p>
           </div>`).join('')}
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Review -->
+    <section class="section section--white" id="review">
+      <div class="container">
+        <div class="review-box reveal">
+          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <h2>${t(T.review.title)}</h2>
+          <p class="section-subtitle">${t(T.review.subtitle)}</p>
+          <a href="https://g.page/r/Ce9zI21RHu9yEBM/review" target="_blank" rel="noopener noreferrer" class="review-btn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            ${t(T.review.cta)}
+          </a>
+          <p class="review-thanks">${t(T.review.thanks)}</p>
         </div>
       </div>
     </section>
@@ -273,6 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <footer class="footer">
       <div class="container">
         <div class="footer-brand">La Maison de Tante Rose</div>
+        <div class="footer-cin">CIN: IT089017C2ZYR6XK4D</div>
         <div class="footer-divider"></div>
         <p>${t(T.footer.madeWith)}</p>
       </div>
@@ -297,9 +372,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const step3text  = T.checkin[prefix + 'step3text']  || T.checkin.step3text;
 
     // Photo paths per room
+    // rosa2/verte2 = internal (electricity card pocket), rosa1/verte1 = external (door access)
     const photos = {
-      rosa: { step2: 'public/rosa%201.jpeg', step3: 'public/rosa%202.jpeg' },
-      verte: { step2: 'public/verte1.jpeg', step3: 'public/verte%202.jpeg' }
+      rosa: { step2: 'public/rosa%202.jpeg', step3: 'public/rosa%201.jpeg' },
+      verte: { step2: 'public/verte%202.jpeg', step3: 'public/verte1.jpeg' }
     };
     const roomPhotos = photos[room] || photos.rosa;
 
