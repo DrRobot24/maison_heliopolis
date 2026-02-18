@@ -1,15 +1,4 @@
-// ========== PIN — cambia qui quando vuoi ==========
-const ACCESS_PIN = '2026';
-// ===================================================
-
 const T = {
-    pin: {
-        title: { it: 'Area Riservata agli Ospiti', en: 'Guest Access Only', fr: 'Accès Réservé aux Hôtes', es: 'Acceso Reservado a Huéspedes' },
-        subtitle: { it: 'Inserisci il codice di accesso', en: 'Enter the access code', fr: 'Entrez le code d\'accès', es: 'Ingrese el código de acceso' },
-        placeholder: { it: 'Codice di accesso', en: 'Access code', fr: 'Code d\'accès', es: 'Código de acceso' },
-        button: { it: 'Entra', en: 'Enter', fr: 'Entrer', es: 'Entrar' },
-        error: { it: 'Codice non valido. Riprova.', en: 'Invalid code. Try again.', fr: 'Code invalide. Réessayez.', es: 'Código no válido. Inténtelo de nuevo.' }
-    },
     nav: {
         checkin: { it: 'Check-in', en: 'Check-in', fr: 'Check-in', es: 'Check-in' },
         checkout: { it: 'Check-out', en: 'Check-out', fr: 'Check-out', es: 'Check-out' },
@@ -209,5 +198,19 @@ const T = {
     },
     footer: {
         madeWith: { it: 'Fatto con ❤️ a Siracusa', en: 'Made with ❤️ in Syracuse', fr: 'Fait avec ❤️ à Syracuse', es: 'Hecho con ❤️ en Siracusa' }
+    },
+    checkinLanding: {
+        needHelp: {
+            it: 'Hai bisogno di aiuto? Contattaci:',
+            en: 'Need help? Contact us:',
+            fr: 'Besoin d\'aide ? Contactez-nous :',
+            es: '¿Necesita ayuda? Contáctenos:'
+        },
+        footer: {
+            it: 'Vi aspettiamo! — La Maison de Tante Rose, Siracusa',
+            en: 'We look forward to welcoming you! — La Maison de Tante Rose, Syracuse',
+            fr: 'Nous vous attendons ! — La Maison de Tante Rose, Syracuse',
+            es: '¡Les esperamos! — La Maison de Tante Rose, Siracusa'
+        }
     }
 };

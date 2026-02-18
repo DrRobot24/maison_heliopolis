@@ -80,175 +80,210 @@ a:hover {
 }
 
 /* ============================================
-   PIN Gate
+   Check-in Landing Page (link sent via social)
    ============================================ */
 
-.pin-gate {
-  position: fixed;
-  inset: 0;
-  z-index: 10000;
+.checkin-landing {
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, var(--cream) 0%, #F8F2EA 50%, var(--cream-light) 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 40px 20px;
 }
 
-.pin-card {
+.checkin-landing__corner {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.checkin-landing__corner--tl {
+  top: -20px;
+  left: -20px;
+}
+
+.checkin-landing__corner--br {
+  bottom: -20px;
+  right: -20px;
+  transform: scale(-1);
+}
+
+.checkin-landing__card {
+  position: relative;
+  z-index: 2;
   background: var(--white);
-  border-radius: 20px;
-  padding: 52px 44px;
+  border-radius: 24px;
+  padding: 48px 40px;
   box-shadow: 0 20px 60px rgba(44, 44, 44, 0.1);
   border: 1px solid rgba(196, 163, 90, 0.15);
+  max-width: 600px;
+  width: 100%;
   text-align: center;
-  max-width: 400px;
-  width: 90%;
-  animation: pinSlideIn 0.6s ease;
+  animation: checkinSlideIn 0.6s ease;
 }
 
-@keyframes pinSlideIn {
+@keyframes checkinSlideIn {
   from {
     opacity: 0;
     transform: translateY(20px) scale(0.97);
   }
-
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
 }
 
-.pin-card h2 {
+.checkin-landing__brand {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.checkin-landing__room-badge {
+  display: inline-block;
+  padding: 8px 24px;
+  background: linear-gradient(135deg, var(--rose-pale), var(--rose-light));
+  color: var(--charcoal);
+  border-radius: 30px;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  letter-spacing: 0.03em;
+}
+
+.checkin-landing__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
   color: var(--charcoal);
   margin-bottom: 8px;
 }
 
-.pin-card .pin-subtitle {
+.checkin-landing__subtitle {
   font-family: var(--font-accent);
   font-size: 1rem;
   color: var(--text-muted);
   font-style: italic;
-  margin-bottom: 32px;
+  margin-bottom: 12px;
 }
 
-.pin-card .pin-brand {
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  color: var(--gold);
-  margin-bottom: 6px;
-}
-
-.pin-input-group {
-  margin-bottom: 20px;
-}
-
-.pin-input {
-  width: 100%;
-  padding: 14px 20px;
-  border: 1.5px solid var(--beige);
-  border-radius: 12px;
-  font-family: var(--font-body);
-  font-size: 1.2rem;
-  text-align: center;
-  letter-spacing: 0.4em;
-  color: var(--charcoal);
-  background: var(--cream-light);
-  outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.pin-input:focus {
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(196, 163, 90, 0.15);
-}
-
-.pin-input.error {
-  border-color: #c0392b;
-  animation: shake 0.4s ease;
-}
-
-@keyframes shake {
-
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-
-  20% {
-    transform: translateX(-8px);
-  }
-
-  40% {
-    transform: translateX(8px);
-  }
-
-  60% {
-    transform: translateX(-5px);
-  }
-
-  80% {
-    transform: translateX(5px);
-  }
-}
-
-.pin-error-msg {
-  color: #c0392b;
-  font-size: 0.85rem;
-  margin-top: 8px;
-  min-height: 20px;
-  font-family: var(--font-accent);
-}
-
-.pin-btn {
-  width: 100%;
-  padding: 14px 24px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  color: var(--white);
-  border: none;
-  border-radius: 12px;
-  font-family: var(--font-accent);
-  font-size: 1.05rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(196, 163, 90, 0.3);
-}
-
-.pin-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(196, 163, 90, 0.4);
-}
-
-.pin-btn:active {
-  transform: translateY(0);
-}
-
-.pin-lang-row {
+.checkin-landing__lang {
   display: flex;
   justify-content: center;
   gap: 6px;
-  margin-top: 28px;
+  margin-bottom: 32px;
 }
 
-.pin-lang-btn {
+.lang-btn-sm {
   background: none;
   border: 1px solid var(--beige);
   border-radius: 20px;
-  padding: 4px 12px;
-  font-size: 0.8rem;
+  padding: 4px 14px;
+  font-size: 0.85rem;
   cursor: pointer;
   color: var(--text-muted);
   transition: all 0.3s ease;
 }
 
-.pin-lang-btn:hover,
-.pin-lang-btn.active {
+.lang-btn-sm:hover,
+.lang-btn-sm.active {
   background: var(--gold);
   color: var(--white);
   border-color: var(--gold);
 }
+
+.checkin-landing__steps {
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.checkin-landing__steps .step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.checkin-landing__steps .step:last-child {
+  margin-bottom: 0;
+}
+
+.checkin-landing__steps .step-number {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(196, 163, 90, 0.3);
+}
+
+.checkin-landing__steps .step-content h4 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+  color: var(--charcoal);
+}
+
+.checkin-landing__steps .step-content p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.checkin-landing__contact {
+  padding-top: 24px;
+  border-top: 1px solid var(--beige);
+}
+
+.checkin-landing__contact p {
+  font-family: var(--font-accent);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.checkin-landing__contact .phone-link {
+  font-size: 1.2rem;
+}
+
+.checkin-landing__footer {
+  position: relative;
+  z-index: 2;
+  margin-top: 32px;
+}
+
+.checkin-landing__footer p {
+  font-family: var(--font-accent);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .checkin-landing__card {
+    padding: 32px 24px;
+  }
+
+  .checkin-landing__corner {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
 
 /* ============================================
    Container
