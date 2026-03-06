@@ -54,10 +54,16 @@ const T = {
             fr: 'Annoncez votre arrivée', es: 'Notifique su llegada'
         },
         step1text: {
-            it: 'Al momento dell\'arrivo davanti alla porta della camera, avvisate per messaggio al <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. La porta si aprirà in automatico.',
-            en: 'Upon arrival in front of the room door, notify by message to <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. The door will open automatically.',
-            fr: 'À votre arrivée devant la porte de la chambre, prévenez par message au <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. La porte s\'ouvrira automatiquement.',
-            es: 'Al llegar frente a la puerta de la habitación, avise por mensaje al <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. La puerta se abrirá automáticamente.'
+            it: 'L\'indirizzo è <strong>Via Bainsizza 100</strong>. Al momento dell\'arrivo davanti alla porta della camera, avvisate per messaggio al <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. La porta si aprirà in automatico.',
+            en: 'The address is <strong>Via Bainsizza 100</strong>. Upon arrival in front of the room door, notify by message to <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. The door will open automatically.',
+            fr: 'L\'adresse est <strong>Via Bainsizza 100</strong>. À votre arrivée devant la porte de la chambre, prévenez par message au <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. La porte s\'ouvrira automatiquement.',
+            es: 'La dirección es <strong>Via Bainsizza 100</strong>. Al llegar frente a la puerta de la habitación, avise por mensaje al <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. La puerta se abrirá automáticamente.'
+        },
+        verte_step1text: {
+            it: 'L\'indirizzo è <strong>Via Bainsizza 98</strong>. Al momento dell\'arrivo davanti alla porta della camera, avvisate per messaggio al <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. La porta si aprirà in automatico.',
+            en: 'The address is <strong>Via Bainsizza 98</strong>. Upon arrival in front of the room door, notify by message to <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. The door will open automatically.',
+            fr: 'L\'adresse est <strong>Via Bainsizza 98</strong>. À votre arrivée devant la porte de la chambre, prévenez par message au <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. La porte s\'ouvrira automatiquement.',
+            es: 'La dirección es <strong>Via Bainsizza 98</strong>. Al llegar frente a la puerta de la habitación, avise por mensaje al <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. La puerta se abrirá automáticamente.'
         },
         step2title: {
             it: 'Attivate l\'elettricità', en: 'Activate electricity',
