@@ -224,6 +224,8 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </section>
 
+    <div class="section-rose-divider">🌹 🌹 🌹</div>
+
     <!-- Welcome -->
     <section class="section section--white">
       <div class="container">
@@ -232,6 +234,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="floral-divider">${SVG.rose}</div>
       </div>
     </section>
+
+    <div class="section-rose-divider">🌹 🌹 🌹</div>
 
     <!-- Check-out -->
     <section class="section section--cream" id="checkout">
@@ -243,6 +247,8 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
     </section>
+
+    <div class="section-rose-divider">🌹 🌹 🌹</div>
 
     <!-- Rules -->
     <section class="section section--white" id="rules">
@@ -256,6 +262,8 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
     </section>
+
+    <div class="section-rose-divider">🌹 🌹 🌹</div>
 
     <!-- Explore -->
     <section class="section section--cream" id="explore">
@@ -275,6 +283,8 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
     </section>
+
+    <div class="section-rose-divider">🌹 🌹 🌹</div>
 
     <!-- Experiences -->
     <section class="section section--white" id="experiences">
@@ -299,6 +309,8 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </section>
 
+    <div class="section-rose-divider">🌹 🌹 🌹</div>
+
     <!-- Where to Eat -->
     <section class="section section--white" id="eat">
       <div class="container">
@@ -317,6 +329,8 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </section>
 
+    <div class="section-rose-divider">🌹 🌹 🌹</div>
+
     <!-- Contacts -->
     <section class="section section--cream" id="contacts">
       <div class="container">
@@ -330,6 +344,8 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
     </section>
+
+    <div class="section-rose-divider">🌹 🌹 🌹</div>
 
     <!-- Google Review -->
     <section class="section section--white" id="review">
@@ -419,6 +435,44 @@ document.addEventListener('DOMContentLoaded', () => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
     }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // Staggered reveal for grid children
+    document.querySelectorAll('.rules-grid .rule-item, .landmarks-grid .landmark-card, .contacts-grid .contact-card').forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = `opacity 0.5s ease ${i * 0.08}s, transform 0.5s ease ${i * 0.08}s`;
+    });
+    const gridObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('.rule-item, .landmark-card, .contact-card').forEach(child => {
+            child.style.opacity = '1';
+            child.style.transform = 'translateY(0)';
+          });
+          gridObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.rules-grid, .landmarks-grid, .contacts-grid').forEach(g => gridObs.observe(g));
+
+    // Falling rose petals in hero
+    const hero = document.querySelector('.hero');
+    if (hero) {
+      const petals = ['🌹', '🥀', '🌸', '🪻'];
+      function spawnPetal() {
+        const el = document.createElement('span');
+        el.className = 'petal';
+        el.textContent = petals[Math.floor(Math.random() * petals.length)];
+        el.style.left = Math.random() * 100 + '%';
+        el.style.animationDuration = (4 + Math.random() * 4) + 's';
+        el.style.fontSize = (0.8 + Math.random() * 0.8) + 'rem';
+        hero.appendChild(el);
+        el.addEventListener('animationend', () => el.remove());
+      }
+      // Spawn a few petals periodically
+      for (let i = 0; i < 5; i++) setTimeout(spawnPetal, i * 600);
+      setInterval(spawnPetal, 2000);
+    }
 
     // Navbar scroll
     const nav = document.getElementById('navbar');
