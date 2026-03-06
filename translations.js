@@ -33,10 +33,10 @@ const T = {
             es: 'Estamos encantados de darles la bienvenida a nuestra casa de vacaciones'
         },
         text: {
-            it: 'La Maison de Tante Rose è un\'accogliente dimora situata nel centro storico di Siracusa, a pochi passi dall\'isola di Ortigia e dai principali monumenti. Questa guida vi aiuterà ad orientarvi durante il vostro soggiorno.',
-            en: 'La Maison de Tante Rose is a cozy residence located in the historic center of Syracuse, just steps from the island of Ortigia and the main monuments. This guide will help you navigate your stay.',
-            fr: 'La Maison de Tante Rose est une résidence chaleureuse située dans le centre historique de Syracuse, à quelques pas de l\'île d\'Ortigia et des principaux monuments. Ce guide vous aidera à vous orienter pendant votre séjour.',
-            es: 'La Maison de Tante Rose es una acogedora residencia situada en el centro histórico de Siracusa, a pocos pasos de la isla de Ortigia y de los principales monumentos. Esta guía le ayudará a orientarse durante su estancia.'
+            it: 'La Maison de tante Rosa è un\'accogliente dimora situata nel centro storico di Siracusa, a pochi passi dall\'isola di Ortigia e dai principali monumenti. Questa guida vi aiuterà ad orientarvi durante il vostro soggiorno.',
+            en: 'La Maison de tante Rosa is a cozy residence located in the historic center of Syracuse, just steps from the island of Ortigia and the main monuments. This guide will help you navigate your stay.',
+            fr: 'La Maison de tante Rosa est une résidence chaleureuse située dans le centre historique de Syracuse, à quelques pas de l\'île d\'Ortigia et des principaux monuments. Ce guide vous aidera à vous orienter pendant votre séjour.',
+            es: 'La Maison de tante Rosa es una acogedora residencia situada en el centro histórico de Siracusa, a pocos pasos de la isla de Ortigia y de los principales monumentos. Esta guía le ayudará a orientarse durante su estancia.'
         }
     },
     checkin: {
@@ -88,10 +88,10 @@ const T = {
         },
         time: '10:00',
         text: {
-            it: 'Il check-out è entro le ore 10:00. Vi preghiamo di lasciare la card sul tavolo, chiudere le finestre e assicurarvi che tutte le luci siano spente. La porta si chiuderà automaticamente. <strong>Prima di lasciare la struttura, avvisate l\'host tramite WhatsApp al <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a></strong>. Vi chiediamo gentilmente di comunicare la vostra uscita al più presto, per consentire allo staff di preparare la camera per i prossimi ospiti.',
-            en: 'Check-out is by 10:00 AM. Please leave the card on the table, close the windows and make sure all lights are off. The door will close automatically. <strong>Before leaving, please notify the host via WhatsApp at <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a></strong>. We kindly ask you to let us know as soon as possible after your departure, so our staff can prepare the room for the next guest.',
-            fr: 'Le check-out est avant 10h00. Veuillez laisser la carte sur la table, fermer les fenêtres et vous assurer que toutes les lumières sont éteintes. La porte se fermera automatiquement. <strong>Avant de partir, veuillez prévenir l\'hôte via WhatsApp au <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a></strong>. Nous vous prions de nous informer dès que possible après votre départ, afin de permettre au personnel de préparer la chambre pour les prochains hôtes.',
-            es: 'El check-out es antes de las 10:00. Por favor, deje la tarjeta sobre la mesa, cierre las ventanas y asegúrese de que todas las luces estén apagadas. La puerta se cerrará automáticamente. <strong>Antes de irse, avise al anfitrión por WhatsApp al <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a></strong>. Le pedimos amablemente que nos avise lo antes posible tras su salida, para que el personal pueda preparar la habitación para los próximos huéspedes.'
+            it: 'Il check-out è entro le ore 10:00. Vi preghiamo di lasciare la card sul tavolo, chiudere le finestre, assicurarvi che tutte le luci siano spente e chiudere la porta. <strong>Prima di lasciare la struttura, avvisate l\'host tramite WhatsApp al <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a></strong>. Vi chiediamo gentilmente di comunicare la vostra uscita al più presto, per consentire allo staff di preparare la camera per i prossimi ospiti.',
+            en: 'Check-out is by 10:00 AM. Please leave the card on the table, close the windows, make sure all lights are off and close the door. <strong>Before leaving, please notify the host via WhatsApp at <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a></strong>. We kindly ask you to let us know as soon as possible after your departure, so our staff can prepare the room for the next guest.',
+            fr: 'Le check-out est avant 10h00. Veuillez laisser la carte sur la table, fermer les fenêtres, vous assurer que toutes les lumières sont éteintes et fermer la porte. <strong>Avant de partir, veuillez prévenir l\'hôte via WhatsApp au <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a></strong>. Nous vous prions de nous informer dès que possible après votre départ, afin de permettre au personnel de préparer la chambre pour les prochains hôtes.',
+            es: 'El check-out es antes de las 10:00. Por favor, deje la tarjeta sobre la mesa, cierre las ventanas, asegúrese de que todas las luces estén apagadas y cierre la puerta. <strong>Antes de irse, avise al anfitrión por WhatsApp al <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a></strong>. Le pedimos amablemente que nos avise lo antes posible tras su salida, para que el personal pueda preparar la habitación para los próximos huéspedes.'
         }
     },
     rules: {
@@ -114,10 +114,6 @@ const T = {
                 desc: { it: 'Vietato fumare all\'interno della struttura', en: 'Smoking is not allowed inside the property', fr: 'Il est interdit de fumer à l\'intérieur', es: 'Prohibido fumar dentro de la propiedad' }
             },
             {
-                icon: '🗑️', title: { it: 'Rifiuti', en: 'Waste', fr: 'Déchets', es: 'Residuos' },
-                desc: { it: 'I rifiuti vanno raccolti tutti insieme in un unico sacchetto', en: 'All waste should be collected together in a single bag', fr: 'Les déchets doivent être rassemblés ensemble dans un seul sac', es: 'Los residuos deben recogerse todos juntos en una sola bolsa' }
-            },
-            {
                 icon: 'no-pets-svg', title: { it: 'Animali', en: 'Pets', fr: 'Animaux', es: 'Mascotas' },
                 desc: { it: 'Non sono ammessi animali nella struttura', en: 'Pets are not allowed in the property', fr: 'Les animaux ne sont pas admis dans l\'établissement', es: 'No se admiten animales en la propiedad' }
             },
@@ -132,6 +128,28 @@ const T = {
                     en: '<strong>Set the code:</strong><br>1) Press the red button inside the safe<br>2) Enter a new code (3 to 8 digits)<br>3) Press the key symbol and then ENTER<br>4) Close<br><br><strong>To open:</strong> enter the code, press the key symbol and ENTER',
                     fr: '<strong>Configurer le code :</strong><br>1) Appuyez sur le bouton rouge à l\'intérieur du coffre<br>2) Saisissez un nouveau code (3 à 8 chiffres)<br>3) Appuyez sur le symbole de la clé puis ENTER<br>4) Fermez<br><br><strong>Pour ouvrir :</strong> saisissez le code, appuyez sur le symbole de la clé et ENTER',
                     es: '<strong>Configurar el código:</strong><br>1) Pulse el botón rojo dentro de la caja fuerte<br>2) Introduzca un nuevo código (de 3 a 8 dígitos)<br>3) Pulse el símbolo de la llave y luego ENTER<br>4) Cierre<br><br><strong>Para abrir:</strong> introduzca el código, pulse el símbolo de la llave y ENTER'
+                }
+            },
+            {
+                icon: '💇', title: { it: 'Phon', en: 'Hair Dryer', fr: 'Sèche-Cheveux', es: 'Secador de Pelo' },
+                desc: { it: 'L\'asciugacapelli si trova all\'interno dell\'armadio', en: 'The hair dryer is located inside the wardrobe', fr: 'Le sèche-cheveux se trouve dans l\'armoire', es: 'El secador de pelo se encuentra dentro del armario' }
+            },
+            {
+                icon: '🎁', title: { it: 'Welcome Kit', en: 'Welcome Kit', fr: 'Kit de Bienvenue', es: 'Kit de Bienvenida' },
+                desc: {
+                    it: 'All\'interno del frigorifero troverete il vostro <strong>Welcome Kit</strong> con acqua, cialde per il caffè (potete utilizzare la macchinetta a vostra disposizione) e bustine di tè e infusi da preparare con il bollitore. Tutto a vostra disposizione per l\'intero soggiorno!',
+                    en: 'Inside the fridge you will find your <strong>Welcome Kit</strong> with water, coffee pods (you can use the coffee machine provided) and tea bags and herbal infusions to prepare with the kettle. Everything is at your disposal for your entire stay!',
+                    fr: 'Dans le réfrigérateur, vous trouverez votre <strong>Welcome Kit</strong> avec de l\'eau, des dosettes de café (vous pouvez utiliser la machine à café mise à disposition) et des sachets de thé et infusions à préparer avec la bouilloire. Tout est à votre disposition pendant tout votre séjour !',
+                    es: 'Dentro de la nevera encontrará su <strong>Welcome Kit</strong> con agua, cápsulas de café (puede usar la cafetera a su disposición) y bolsitas de té e infusiones para preparar con el hervidor. ¡Todo a su disposición durante toda su estancia!'
+                }
+            },
+            {
+                icon: '🅿️', title: { it: 'Parcheggio', en: 'Parking', fr: 'Parking', es: 'Aparcamiento' },
+                desc: {
+                    it: 'Il parcheggio è libero e su strada: potete parcheggiare la vostra auto dove preferite senza preoccuparvi di pagare pedaggi o strisce blu. Nessun costo aggiuntivo!',
+                    en: 'Parking is free and on the street: you can park your car wherever you prefer without worrying about tolls or paid zones. No extra costs!',
+                    fr: 'Le stationnement est gratuit et dans la rue : vous pouvez garer votre voiture où vous le souhaitez sans vous soucier de péages ou de zones payantes. Aucun coût supplémentaire !',
+                    es: '¡El aparcamiento es gratuito y en la calle: puede aparcar su coche donde prefiera sin preocuparse por peajes o zonas de pago. ¡Sin costes adicionales!'
                 }
             }
         ]
@@ -187,7 +205,8 @@ const T = {
                     en: 'Ask your host for information and booking!',
                     fr: 'Demandez des informations à votre hôte pour réserver !',
                     es: '¡Pida información a su anfitrión para reservar!'
-                }
+                },
+                photos: ['public/1.jpeg', 'public/2.jpeg', 'public/3.jpeg']
             }
         ]
     },
@@ -199,36 +218,37 @@ const T = {
         },
         categories: [
             {
-                emoji: '🍝', name: { it: 'Cucina Tradizionale Siciliana', en: 'Traditional Sicilian Cuisine', fr: 'Cuisine Traditionnelle Sicilienne', es: 'Cocina Tradicional Siciliana' },
+                emoji: '🥐', name: { it: 'Colazione', en: 'Breakfast', fr: 'Petit-Déjeuner', es: 'Desayuno' },
                 restaurants: [
-                    { name: 'Don Camillo', desc: { it: 'Elegante, piatti della tradizione rivisitati', en: 'Elegant, revisited traditional dishes', fr: 'Élégant, plats traditionnels revisités', es: 'Elegante, platos tradicionales reinventados' }, meta: 'Via Maestranza 96' },
-                    { name: 'Sicilia in Tavola', desc: { it: 'Autentica cucina casalinga siciliana', en: 'Authentic Sicilian home cooking', fr: 'Authentique cuisine familiale sicilienne', es: 'Auténtica cocina casera siciliana' }, meta: 'Via Cavour 28' }
+                    { name: 'Bar Drago', desc: { it: 'Ottima colazione nel cuore di Siracusa', en: 'Great breakfast in the heart of Syracuse', fr: 'Excellent petit-déjeuner au cœur de Syracuse', es: 'Excelente desayuno en el corazón de Siracusa' }, meta: 'Siracusa' },
+                    { name: 'Levante', desc: { it: 'Colazione con vista e prodotti freschi', en: 'Breakfast with a view and fresh products', fr: 'Petit-déjeuner avec vue et produits frais', es: 'Desayuno con vista y productos frescos' }, meta: 'Siracusa' },
+                    { name: 'Nuova Dolceria', desc: { it: 'Dolci artigianali e colazione tradizionale', en: 'Artisan pastries and traditional breakfast', fr: 'Pâtisseries artisanales et petit-déjeuner traditionnel', es: 'Dulces artesanales y desayuno tradicional' }, meta: 'Siracusa' },
+                    { name: 'El Trocadero', desc: { it: 'Bar caratteristico per una colazione perfetta', en: 'Charming bar for a perfect breakfast', fr: 'Bar charmant pour un petit-déjeuner parfait', es: 'Bar con encanto para un desayuno perfecto' }, meta: 'Siracusa' }
                 ]
             },
             {
-                emoji: '🐟', name: { it: 'Pesce e Frutti di Mare', en: 'Seafood', fr: 'Poisson et Fruits de Mer', es: 'Pescado y Mariscos' },
+                emoji: '🍹', name: { it: 'Aperitivo', en: 'Aperitivo', fr: 'Apéritif', es: 'Aperitivo' },
                 restaurants: [
-                    { name: 'La Medusa', desc: { it: 'Pesce fresco con vista sul porto', en: 'Fresh fish with harbor view', fr: 'Poisson frais avec vue sur le port', es: 'Pescado fresco con vista al puerto' }, meta: 'Via S. Teresa 21' },
-                    { name: 'Porta Marina Seafood', desc: { it: 'Street food di mare, informale', en: 'Informal seafood street food', fr: 'Street food de la mer, informel', es: 'Street food de mar, informal' }, meta: 'Largo Porta Marina' }
+                    { name: 'Barcollo', desc: { it: 'Aperitivi creativi in un\'atmosfera unica', en: 'Creative aperitifs in a unique atmosphere', fr: 'Apéritifs créatifs dans une atmosphère unique', es: 'Aperitivos creativos en un ambiente único' }, meta: 'Siracusa' },
+                    { name: 'Kaleido', desc: { it: 'Cocktail bar moderno con drink ricercati', en: 'Modern cocktail bar with refined drinks', fr: 'Bar à cocktails moderne avec boissons raffinées', es: 'Bar de cócteles moderno con bebidas selectas' }, meta: 'Siracusa' }
+                ]
+            },
+            {
+                emoji: '🍽️', name: { it: 'Cena', en: 'Dinner', fr: 'Dîner', es: 'Cena' },
+                restaurants: [
+                    { name: 'Osteria Red Moon', desc: { it: 'Osteria con piatti della tradizione rivisitati', en: 'Osteria with revisited traditional dishes', fr: 'Osteria avec plats traditionnels revisités', es: 'Ostería con platos tradicionales reinventados' }, meta: 'Siracusa' },
+                    { name: 'Citylife', desc: { it: 'Cucina contemporanea in ambiente elegante', en: 'Contemporary cuisine in an elegant setting', fr: 'Cuisine contemporaine dans un cadre élégant', es: 'Cocina contemporánea en ambiente elegante' }, meta: 'Siracusa' },
+                    { name: 'Sapuri e Amuri', desc: { it: 'Sapori autentici siciliani con amore', en: 'Authentic Sicilian flavors with love', fr: 'Saveurs siciliennes authentiques avec amour', es: 'Sabores sicilianos auténticos con amor' }, meta: 'Siracusa' },
+                    { name: 'Anchovies', desc: { it: 'Ristorante di pesce con piatti raffinati', en: 'Seafood restaurant with refined dishes', fr: 'Restaurant de poisson avec plats raffinés', es: 'Restaurante de pescado con platos refinados' }, meta: 'Siracusa' }
                 ]
             },
             {
                 emoji: '🍕', name: { it: 'Pizza', en: 'Pizza', fr: 'Pizza', es: 'Pizza' },
                 restaurants: [
-                    { name: 'Pizzeria Schiticchio', desc: { it: 'Pizza napoletana con ingredienti locali', en: 'Neapolitan pizza with local ingredients', fr: 'Pizza napolitaine avec ingrédients locaux', es: 'Pizza napolitana con ingredientes locales' }, meta: 'Via Mirabella 17' }
-                ]
-            },
-            {
-                emoji: '🥐', name: { it: 'Colazione e Caffè', en: 'Breakfast & Cafés', fr: 'Petit-Déjeuner et Cafés', es: 'Desayuno y Cafés' },
-                restaurants: [
-                    { name: 'Bar Midolo', desc: { it: 'Storico bar con granita e brioche', en: 'Historic bar with granita and brioche', fr: 'Bar historique avec granita et brioche', es: 'Bar histórico con granita y brioche' }, meta: 'Corso Umberto I' },
-                    { name: 'Pasticceria Leonardi', desc: { it: 'Dolci siciliani artigianali', en: 'Artisan Sicilian pastries', fr: 'Pâtisseries siciliennes artisanales', es: 'Dulces sicilianos artesanales' }, meta: 'Via Roma 41' }
-                ]
-            },
-            {
-                emoji: '🍷', name: { it: 'Aperitivo e Fine Dining', en: 'Aperitivo & Fine Dining', fr: 'Apéritif et Haute Cuisine', es: 'Aperitivo y Alta Cocina' },
-                restaurants: [
-                    { name: 'Retroscena', desc: { it: 'Cocktail bar elegante in Ortigia', en: 'Elegant cocktail bar in Ortigia', fr: 'Bar à cocktails élégant à Ortigia', es: 'Bar de cócteles elegante en Ortigia' }, meta: 'Via della Giudecca 18' }
+                    { name: 'Anima e Core', desc: { it: 'Pizza napoletana con ingredienti di qualità', en: 'Neapolitan pizza with quality ingredients', fr: 'Pizza napolitaine avec ingrédients de qualité', es: 'Pizza napolitana con ingredientes de calidad' }, meta: 'Siracusa' },
+                    { name: 'Il Matto', desc: { it: 'Pizzeria creativa con impasti speciali', en: 'Creative pizzeria with special doughs', fr: 'Pizzeria créative avec pâtes spéciales', es: 'Pizzería creativa con masas especiales' }, meta: 'Siracusa' },
+                    { name: 'Bianco Pepe', desc: { it: 'Pizza gourmet con topping ricercati', en: 'Gourmet pizza with refined toppings', fr: 'Pizza gastronomique avec garnitures raffinées', es: 'Pizza gourmet con ingredientes selectos' }, meta: 'Siracusa' },
+                    { name: 'Meditè', desc: { it: 'Pizzeria mediterranea con sapori unici', en: 'Mediterranean pizzeria with unique flavors', fr: 'Pizzeria méditerranéenne aux saveurs uniques', es: 'Pizzería mediterránea con sabores únicos' }, meta: 'Siracusa' }
                 ]
             }
         ]
@@ -242,7 +262,7 @@ const T = {
         items: [
             { icon: '🏠', title: { it: 'Host / Proprietario', en: 'Host / Owner', fr: 'Hôte / Propriétaire', es: 'Anfitrión / Propietario' }, value: '+39 351 761 1469', link: 'tel:+393517611469' },
             { icon: 'emergency-svg', title: { it: 'Emergenze (Polizia / Ambulanza)', en: 'Emergencies (Police / Ambulance)', fr: 'Urgences (Police / Ambulance)', es: 'Emergencias (Policía / Ambulancia)' }, value: '112', link: 'tel:112' },
-            { icon: '🚕', title: { it: 'Taxi Siracusa', en: 'Syracuse Taxi', fr: 'Taxi Syracuse', es: 'Taxi Siracusa' }, value: '+39 0931 69722', link: 'tel:+390931697222' },
+            { icon: '🚕', title: { it: 'Radio Taxi Siracusa', en: 'Radio Taxi Syracuse', fr: 'Radio Taxi Syracuse', es: 'Radio Taxi Siracusa' }, value: '0931 1844', link: 'tel:09311844' },
             { icon: '🩺', title: { it: 'Guardia Medica', en: 'Medical Guard', fr: 'Médecin de Garde', es: 'Guardia Médica' }, value: '+39 0931 484629', link: 'tel:+390931484629' }
         ]
     },
@@ -278,10 +298,10 @@ const T = {
             es: '¿Necesita ayuda? Contáctenos:'
         },
         footer: {
-            it: 'Vi aspettiamo! — La Maison de Tante Rose, Siracusa',
-            en: 'We look forward to welcoming you! — La Maison de Tante Rose, Syracuse',
-            fr: 'Nous vous attendons ! — La Maison de Tante Rose, Syracuse',
-            es: '¡Les esperamos! — La Maison de Tante Rose, Siracusa'
+            it: 'Vi aspettiamo! — La Maison de tante Rosa, Siracusa',
+            en: 'We look forward to welcoming you! — La Maison de tante Rosa, Syracuse',
+            fr: 'Nous vous attendons ! — La Maison de tante Rosa, Syracuse',
+            es: '¡Les esperamos! — La Maison de tante Rosa, Siracusa'
         }
     }
 };
