@@ -155,9 +155,13 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
 
-      <footer class="checkin-landing__footer">
+      <footer class="checkin-landing__footer checkin-footer-dark">
+        <div class="footer-brand">La Maison de tante Rosa</div>
         <div class="footer-cin">CIN: IT089017C2ZYR6XK4D</div>
+        <div class="footer-divider"></div>
         <p>${t(T.checkinLanding.footer)}</p>
+        <div class="footer-divider"></div>
+        <p class="footer-credit">© ${new Date().getFullYear()} All rights reserved — Made with 🖤 by <a href="https://encreade.com" target="_blank" rel="noopener noreferrer">Encreade</a></p>
       </footer>
     </div>`;
 
@@ -170,6 +174,24 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCheckinLanding();
       });
     });
+
+    // Falling petals on check-in page
+    const landing = document.querySelector('.checkin-landing');
+    if (landing) {
+      const petals = ['🌹', '🥀', '🌸', '🪻'];
+      function spawnPetal() {
+        const el = document.createElement('span');
+        el.className = 'petal';
+        el.textContent = petals[Math.floor(Math.random() * petals.length)];
+        el.style.left = Math.random() * 100 + '%';
+        el.style.animationDuration = (4 + Math.random() * 4) + 's';
+        el.style.fontSize = (0.8 + Math.random() * 0.8) + 'rem';
+        landing.appendChild(el);
+        el.addEventListener('animationend', () => el.remove());
+      }
+      for (let i = 0; i < 4; i++) setTimeout(spawnPetal, i * 700);
+      setInterval(spawnPetal, 2500);
+    }
   }
 
   // ================================================================

@@ -283,6 +283,51 @@ a:hover {
   font-style: italic;
 }
 
+.checkin-footer-dark {
+  background: var(--charcoal);
+  padding: 24px 28px 16px;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.checkin-footer-dark .footer-brand {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.checkin-footer-dark .footer-cin {
+  color: var(--beige);
+}
+
+.checkin-footer-dark p {
+  color: var(--beige-dark);
+}
+
+.checkin-footer-dark .footer-credit {
+  font-size: 0.8rem;
+  color: var(--beige-dark);
+  opacity: 0.7;
+  font-style: normal;
+}
+
+.checkin-footer-dark .footer-credit a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.checkin-footer-dark .footer-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 12px auto;
+  opacity: 0.5;
+}
+
 @media (max-width: 480px) {
   .checkin-landing__card {
     padding: 32px 24px;
