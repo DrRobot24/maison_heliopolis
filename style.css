@@ -545,6 +545,10 @@ p {
   width: 100%;
 }
 
+.nav-mobile-brand {
+  display: none;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
