@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="review-stars">⭐⭐⭐⭐⭐</div>
           <h2>${t(T.review.title)}</h2>
           <p class="section-subtitle">${t(T.review.subtitle)}</p>
-          <a href="https://www.google.com/search?sca_esv=a2755a786bd8ce70&sxsrf=ANbL-n49rTOvKiqMWTHqDDgs_7O6m7KtjQ:1772773872360&q=La+Maison+de+tante+Rosa+Recensioni&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2tzAzMTI1szAxNTQzMrAwtjAy28DI-IpRySdRwTcxszg_TyElVaEkMa8kVSEovzhRISg1OTWvODM_L3MRKxGKAAcZa5JkAAAA&rldimm=7864256845162083826&tbm=lcl&hl=it-IT&sa=X&ved=2ahUKEwixmLenwYqTAxX19rsIHY4CEMIQ9fQKegQISxAI&biw=1920&bih=911&dpr=1#lkt=LocalPoiReviews" target="_blank" rel="noopener noreferrer" class="review-btn">
+          <a href="https://share.google/WIXLVuzUxssVN0bxt" target="_blank" rel="noopener noreferrer" class="review-btn">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
             ${t(T.review.cta)}
           </a>
@@ -393,9 +393,63 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="footer-divider"></div>
         <p>${t(T.footer.madeWith)}</p>
         <div class="footer-divider"></div>
+        <p class="footer-legal">
+          <a href="#" class="footer-legal-link" data-open-modal="privacy">${t(T.cookie.footerPrivacy)}</a> · 
+          <a href="#" class="footer-legal-link" data-open-modal="cookie">${t(T.cookie.footerCookie)}</a>
+        </p>
         <p class="footer-credit">© ${new Date().getFullYear()} All rights reserved — Made with 🖤 by <a href="https://encreade.com" target="_blank" rel="noopener noreferrer">Encreade</a></p>
       </div>
     </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner" style="display:none">
+      <p>${t(T.cookie.bannerText)}</p>
+      <div class="cookie-banner-actions">
+        <button class="cookie-btn cookie-btn--accept" id="cookieAccept">${t(T.cookie.accept)}</button>
+        <button class="cookie-btn cookie-btn--info" data-open-modal="cookie">${t(T.cookie.moreInfo)}</button>
+      </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div class="legal-modal" id="modal-privacy">
+      <div class="legal-modal-overlay"></div>
+      <div class="legal-modal-content">
+        <button class="legal-modal-close">&times;</button>
+        <h2>${t(T.cookie.privacyTitle)}</h2>
+        <div class="legal-modal-body">
+          <p><strong>Titolare del trattamento:</strong> La Maison de tante Rosa — Via Bainsizza 100, 96100 Siracusa (SR), Italia.</p>
+          <p><strong>Dati raccolti:</strong> Il sito non raccoglie dati personali direttamente. Tuttavia, servizi di terze parti incorporati (Google Maps) possono raccogliere dati di navigazione, indirizzo IP e cookie tecnici.</p>
+          <p><strong>Finalità:</strong> I dati trattati dai servizi terzi sono utilizzati esclusivamente per il funzionamento della mappa interattiva e per migliorare l'esperienza di navigazione.</p>
+          <p><strong>Base giuridica:</strong> Legittimo interesse (Art. 6, par. 1, lett. f GDPR) per i cookie tecnici; consenso (Art. 6, par. 1, lett. a GDPR) per i cookie di terze parti.</p>
+          <p><strong>Conservazione:</strong> I cookie di terze parti sono gestiti secondo le policy di Google. Nessun dato personale viene conservato dal titolare.</p>
+          <p><strong>Diritti dell'interessato:</strong> Ai sensi degli artt. 15-22 del GDPR, è possibile esercitare i diritti di accesso, rettifica, cancellazione, limitazione e portabilità scrivendo a: info@encreade.com</p>
+          <p><strong>Hosting:</strong> Il sito è ospitato su Vercel Inc. (USA), che può raccogliere dati di log (IP, user-agent). Vercel aderisce alle Standard Contractual Clauses per il trasferimento dei dati extra-UE.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cookie Policy Modal -->
+    <div class="legal-modal" id="modal-cookie">
+      <div class="legal-modal-overlay"></div>
+      <div class="legal-modal-content">
+        <button class="legal-modal-close">&times;</button>
+        <h2>${t(T.cookie.policyTitle)}</h2>
+        <div class="legal-modal-body">
+          <p><strong>Cosa sono i cookie:</strong> I cookie sono piccoli file di testo memorizzati dal browser per garantire il funzionamento del sito e ricordare le preferenze dell'utente.</p>
+          <p><strong>Cookie tecnici (necessari):</strong></p>
+          <ul>
+            <li><code>tanterose_lang</code> — Salva la lingua selezionata (localStorage). Durata: persistente.</li>
+            <li><code>tanterose_cookie</code> — Registra il consenso ai cookie. Durata: 365 giorni.</li>
+          </ul>
+          <p><strong>Cookie di terze parti:</strong></p>
+          <ul>
+            <li><strong>Google Maps</strong> (iframe embed) — Google può impostare cookie per il funzionamento della mappa. Per maggiori informazioni: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy Google</a></li>
+          </ul>
+          <p><strong>Come disabilitare i cookie:</strong> È possibile gestire i cookie tramite le impostazioni del proprio browser. La disabilitazione dei cookie tecnici potrebbe compromettere il funzionamento del sito.</p>
+          <p><strong>Aggiornamento:</strong> Questa policy può essere aggiornata periodicamente. Ultimo aggiornamento: marzo 2026.</p>
+        </div>
+      </div>
+    </div>
 
     <!-- Scroll to Top -->
     <button class="scroll-top" aria-label="Scroll to top">${SVG.arrowUp}</button>
@@ -505,13 +559,47 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile menu
     const toggle = document.querySelector('.nav-toggle');
     const links = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => { toggle.classList.toggle('open'); links.classList.toggle('open'); });
-    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { toggle.classList.remove('open'); links.classList.remove('open'); }));
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      links.classList.toggle('open');
+      document.body.style.overflow = links.classList.contains('open') ? 'hidden' : '';
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      toggle.classList.remove('open');
+      links.classList.remove('open');
+      document.body.style.overflow = '';
+    }));
 
     // Scroll top
     const stb = document.querySelector('.scroll-top');
     window.addEventListener('scroll', () => stb.classList.toggle('visible', window.scrollY > 500), { passive: true, ...sig });
     stb.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Cookie banner
+    const cookieBanner = document.getElementById('cookieBanner');
+    if (!localStorage.getItem('tanterose_cookie')) {
+      cookieBanner.style.display = '';
+    }
+    document.getElementById('cookieAccept').addEventListener('click', () => {
+      localStorage.setItem('tanterose_cookie', '1');
+      cookieBanner.style.display = 'none';
+    });
+
+    // Legal modals
+    document.querySelectorAll('[data-open-modal]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modal = document.getElementById('modal-' + btn.dataset.openModal);
+        if (modal) modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    document.querySelectorAll('.legal-modal-close, .legal-modal-overlay').forEach(el => {
+      el.addEventListener('click', () => {
+        el.closest('.legal-modal').classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
   }
 
 });

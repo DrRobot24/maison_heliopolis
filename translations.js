@@ -309,5 +309,20 @@ const T = {
             fr: 'Nous vous attendons ! — La Maison de tante Rosa, Syracuse',
             es: '¡Les esperamos! — La Maison de tante Rosa, Siracusa'
         }
+    },
+    cookie: {
+        bannerText: {
+            it: 'Questo sito utilizza cookie tecnici e di terze parti (Google Maps) per garantire il corretto funzionamento. Continuando la navigazione accetti l\'utilizzo dei cookie.',
+            en: 'This site uses technical and third-party cookies (Google Maps) to ensure proper functionality. By continuing to browse, you accept the use of cookies.',
+            fr: 'Ce site utilise des cookies techniques et tiers (Google Maps) pour garantir son bon fonctionnement. En continuant votre navigation, vous acceptez l\'utilisation des cookies.',
+            es: 'Este sitio utiliza cookies técnicas y de terceros (Google Maps) para garantizar el correcto funcionamiento. Al continuar navegando, acepta el uso de cookies.'
+        },
+        accept: { it: 'Accetta', en: 'Accept', fr: 'Accepter', es: 'Aceptar' },
+        moreInfo: { it: 'Maggiori info', en: 'More info', fr: 'En savoir plus', es: 'Más información' },
+        policyTitle: { it: 'Cookie Policy', en: 'Cookie Policy', fr: 'Politique de Cookies', es: 'Política de Cookies' },
+        privacyTitle: { it: 'Informativa sulla Privacy', en: 'Privacy Policy', fr: 'Politique de Confidentialité', es: 'Política de Privacidad' },
+        close: { it: 'Chiudi', en: 'Close', fr: 'Fermer', es: 'Cerrar' },
+        footerPrivacy: { it: 'Privacy', en: 'Privacy', fr: 'Confidentialité', es: 'Privacidad' },
+        footerCookie: { it: 'Cookie', en: 'Cookies', fr: 'Cookies', es: 'Cookies' }
     }
 };
