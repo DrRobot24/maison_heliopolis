@@ -342,11 +342,11 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="restaurant-category reveal">
             <h3><span class="emoji">${cat.emoji}</span> ${t(cat.name)}</h3>
             <div class="restaurant-list">${cat.restaurants.map(r => `
-              <div class="restaurant-item">
-                <div class="name">${r.name}</div>
+              <a href="${r.link}" target="_blank" rel="noopener noreferrer" class="restaurant-item">
+                <div class="name">${r.name} <span class="restaurant-arrow">→</span></div>
                 <div class="desc">${t(r.desc)}</div>
                 <div class="meta">📍 ${r.meta}</div>
-              </div>`).join('')}
+              </a>`).join('')}
             </div>
           </div>`).join('')}
       </div>

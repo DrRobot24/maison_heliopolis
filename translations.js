@@ -226,35 +226,35 @@ const T = {
             {
                 emoji: '🥐', name: { it: 'Colazione', en: 'Breakfast', fr: 'Petit-Déjeuner', es: 'Desayuno' },
                 restaurants: [
-                    { name: 'Bar Drago', desc: { it: 'Ottima colazione nel cuore di Siracusa', en: 'Great breakfast in the heart of Syracuse', fr: 'Excellent petit-déjeuner au cœur de Syracuse', es: 'Excelente desayuno en el corazón de Siracusa' }, meta: 'Siracusa' },
-                    { name: 'Levante', desc: { it: 'Colazione con vista e prodotti freschi', en: 'Breakfast with a view and fresh products', fr: 'Petit-déjeuner avec vue et produits frais', es: 'Desayuno con vista y productos frescos' }, meta: 'Siracusa' },
-                    { name: 'Nuova Dolceria', desc: { it: 'Dolci artigianali e colazione tradizionale', en: 'Artisan pastries and traditional breakfast', fr: 'Pâtisseries artisanales et petit-déjeuner traditionnel', es: 'Dulces artesanales y desayuno tradicional' }, meta: 'Siracusa' },
-                    { name: 'El Trocadero', desc: { it: 'Bar caratteristico per una colazione perfetta', en: 'Charming bar for a perfect breakfast', fr: 'Bar charmant pour un petit-déjeuner parfait', es: 'Bar con encanto para un desayuno perfecto' }, meta: 'Siracusa' }
+                    { name: 'Bar Drago', desc: { it: 'Ottima colazione nel cuore di Siracusa', en: 'Great breakfast in the heart of Syracuse', fr: 'Excellent petit-déjeuner au cœur de Syracuse', es: 'Excelente desayuno en el corazón de Siracusa' }, meta: 'Siracusa', link: 'https://share.google/aUFgNOgsSJ8hMOA7v' },
+                    { name: 'A Levante', desc: { it: 'Colazione con vista e prodotti freschi', en: 'Breakfast with a view and fresh products', fr: 'Petit-déjeuner avec vue et produits frais', es: 'Desayuno con vista y productos frescos' }, meta: 'Siracusa', link: 'https://share.google/CZqpjXyntji8SOFO4' },
+                    { name: 'Nuova Dolceria', desc: { it: 'Dolci artigianali e colazione tradizionale', en: 'Artisan pastries and traditional breakfast', fr: 'Pâtisseries artisanales et petit-déjeuner traditionnel', es: 'Dulces artesanales y desayuno tradicional' }, meta: 'Siracusa', link: 'https://share.google/hh1dPONs0aO8hfMOp' },
+                    { name: 'El Trocadero', desc: { it: 'Bar caratteristico per una colazione perfetta', en: 'Charming bar for a perfect breakfast', fr: 'Bar charmant pour un petit-déjeuner parfait', es: 'Bar con encanto para un desayuno perfecto' }, meta: 'Siracusa', link: 'https://share.google/k4xcRyTh2VQJ3AGjj' }
                 ]
             },
             {
                 emoji: '🍹', name: { it: 'Aperitivo', en: 'Aperitivo', fr: 'Apéritif', es: 'Aperitivo' },
                 restaurants: [
-                    { name: 'Barcollo', desc: { it: 'Aperitivi creativi in un\'atmosfera unica', en: 'Creative aperitifs in a unique atmosphere', fr: 'Apéritifs créatifs dans une atmosphère unique', es: 'Aperitivos creativos en un ambiente único' }, meta: 'Siracusa' },
-                    { name: 'Kaleido', desc: { it: 'Cocktail bar moderno con drink ricercati', en: 'Modern cocktail bar with refined drinks', fr: 'Bar à cocktails moderne avec boissons raffinées', es: 'Bar de cócteles moderno con bebidas selectas' }, meta: 'Siracusa' }
+                    { name: 'Barcollo', desc: { it: 'Aperitivi creativi in un\'atmosfera unica', en: 'Creative aperitifs in a unique atmosphere', fr: 'Apéritifs créatifs dans une atmosphère unique', es: 'Aperitivos creativos en un ambiente único' }, meta: 'Siracusa', link: 'https://share.google/v34AzBGS2kp4xWySy' },
+                    { name: 'Kaleido', desc: { it: 'Cocktail bar moderno con drink ricercati', en: 'Modern cocktail bar with refined drinks', fr: 'Bar à cocktails moderne avec boissons raffinées', es: 'Bar de cócteles moderno con bebidas selectas' }, meta: 'Siracusa', link: 'https://share.google/7Dw6JElLCt0JJ2G0e' }
                 ]
             },
             {
                 emoji: '🍽️', name: { it: 'Cena', en: 'Dinner', fr: 'Dîner', es: 'Cena' },
                 restaurants: [
-                    { name: 'Osteria Red Moon', desc: { it: 'Osteria con piatti della tradizione rivisitati', en: 'Osteria with revisited traditional dishes', fr: 'Osteria avec plats traditionnels revisités', es: 'Ostería con platos tradicionales reinventados' }, meta: 'Siracusa' },
-                    { name: 'Citylife', desc: { it: 'Cucina contemporanea in ambiente elegante', en: 'Contemporary cuisine in an elegant setting', fr: 'Cuisine contemporaine dans un cadre élégant', es: 'Cocina contemporánea en ambiente elegante' }, meta: 'Siracusa' },
-                    { name: 'Sapuri e Amuri', desc: { it: 'Sapori autentici siciliani con amore', en: 'Authentic Sicilian flavors with love', fr: 'Saveurs siciliennes authentiques avec amour', es: 'Sabores sicilianos auténticos con amor' }, meta: 'Siracusa' },
-                    { name: 'Anchovies', desc: { it: 'Ristorante di pesce con piatti raffinati', en: 'Seafood restaurant with refined dishes', fr: 'Restaurant de poisson avec plats raffinés', es: 'Restaurante de pescado con platos refinados' }, meta: 'Siracusa' }
+                    { name: 'Osteria Red Moon', desc: { it: 'Osteria con piatti della tradizione rivisitati', en: 'Osteria with revisited traditional dishes', fr: 'Osteria avec plats traditionnels revisités', es: 'Ostería con platos tradicionales reinventados' }, meta: 'Siracusa', link: 'https://share.google/bgttvIFU1scPRPNOO' },
+                    { name: 'Citylife', desc: { it: 'Cucina contemporanea in ambiente elegante', en: 'Contemporary cuisine in an elegant setting', fr: 'Cuisine contemporaine dans un cadre élégant', es: 'Cocina contemporánea en ambiente elegante' }, meta: 'Siracusa', link: 'https://share.google/q40v1mlFupoMBe07C' },
+                    { name: 'Sapuri e Amuri', desc: { it: 'Sapori autentici siciliani con amore', en: 'Authentic Sicilian flavors with love', fr: 'Saveurs siciliennes authentiques avec amour', es: 'Sabores sicilianos auténticos con amor' }, meta: 'Siracusa', link: 'https://share.google/CUuj3NFJqqcqdRXzn' },
+                    { name: 'Anchovies', desc: { it: 'Ristorante di pesce con piatti raffinati', en: 'Seafood restaurant with refined dishes', fr: 'Restaurant de poisson avec plats raffinés', es: 'Restaurante de pescado con platos refinados' }, meta: 'Siracusa', link: 'https://share.google/F0AIvnJmkbFTAnd0A' }
                 ]
             },
             {
                 emoji: '🍕', name: { it: 'Pizza', en: 'Pizza', fr: 'Pizza', es: 'Pizza' },
                 restaurants: [
-                    { name: 'Anima e Core', desc: { it: 'Pizza napoletana con ingredienti di qualità', en: 'Neapolitan pizza with quality ingredients', fr: 'Pizza napolitaine avec ingrédients de qualité', es: 'Pizza napolitana con ingredientes de calidad' }, meta: 'Siracusa' },
-                    { name: 'Il Matto', desc: { it: 'Pizzeria creativa con impasti speciali', en: 'Creative pizzeria with special doughs', fr: 'Pizzeria créative avec pâtes spéciales', es: 'Pizzería creativa con masas especiales' }, meta: 'Siracusa' },
-                    { name: 'Bianco Pepe', desc: { it: 'Pizza gourmet con topping ricercati', en: 'Gourmet pizza with refined toppings', fr: 'Pizza gastronomique avec garnitures raffinées', es: 'Pizza gourmet con ingredientes selectos' }, meta: 'Siracusa' },
-                    { name: 'Meditè', desc: { it: 'Pizzeria mediterranea con sapori unici', en: 'Mediterranean pizzeria with unique flavors', fr: 'Pizzeria méditerranéenne aux saveurs uniques', es: 'Pizzería mediterránea con sabores únicos' }, meta: 'Siracusa' }
+                    { name: 'Anima e Core', desc: { it: 'Pizza napoletana con ingredienti di qualità', en: 'Neapolitan pizza with quality ingredients', fr: 'Pizza napolitaine avec ingrédients de qualité', es: 'Pizza napolitana con ingredientes de calidad' }, meta: 'Siracusa', link: 'https://share.google/NZv7dKdjbVbKlBPuY' },
+                    { name: 'Il Matto', desc: { it: 'Pizzeria creativa con impasti speciali', en: 'Creative pizzeria with special doughs', fr: 'Pizzeria créative avec pâtes spéciales', es: 'Pizzería creativa con masas especiales' }, meta: 'Siracusa', link: 'https://share.google/3VIEr0GtqUVE7uOAt' },
+                    { name: 'Bianco Pepe', desc: { it: 'Pizza gourmet con topping ricercati', en: 'Gourmet pizza with refined toppings', fr: 'Pizza gastronomique avec garnitures raffinées', es: 'Pizza gourmet con ingredientes selectos' }, meta: 'Siracusa', link: 'https://share.google/My4Y783kdq059qVaI' },
+                    { name: 'Meditè', desc: { it: 'Pizzeria mediterranea con sapori unici', en: 'Mediterranean pizzeria with unique flavors', fr: 'Pizzeria méditerranéenne aux saveurs uniques', es: 'Pizzería mediterránea con sabores únicos' }, meta: 'Siracusa', link: 'https://share.google/Ba6uUSNH9pgxkAbHD' }
                 ]
             }
         ]

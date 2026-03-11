@@ -1151,17 +1151,22 @@ p {
   gap: 20px;
 }
 
-.restaurant-item {
+a.restaurant-item {
+  display: block;
   padding: 24px;
   background: var(--white);
   border-radius: var(--border-radius);
   border: 1px solid rgba(196, 163, 90, 0.12);
   transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
-.restaurant-item:hover {
+a.restaurant-item:hover {
   box-shadow: var(--shadow-medium);
   border-color: var(--gold-light);
+  transform: translateY(-2px);
 }
 
 .restaurant-item .name {
@@ -1169,6 +1174,21 @@ p {
   font-size: 1.1rem;
   color: var(--charcoal);
   margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.restaurant-arrow {
+  font-size: 0.9rem;
+  color: var(--gold);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+a.restaurant-item:hover .restaurant-arrow {
+  opacity: 1;
+  transform: translateX(4px);
 }
 
 .restaurant-item .desc {
