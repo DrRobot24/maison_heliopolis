@@ -213,6 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="#" class="nav-brand" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">La Maison de tante Rosa</a>
         <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
         <ul class="nav-links">
+          <li class="nav-mobile-brand"><span class="nav-mobile-rose">🌹</span><span>La Maison de tante Rosa</span></li>
           <li><a href="#checkout">${t(T.nav.checkout)}</a></li>
           <li><a href="#rules">${t(T.nav.rules)}</a></li>
           <li><a href="#explore">${t(T.nav.explore)}</a></li>
