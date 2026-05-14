@@ -109,7 +109,7 @@ const T = {
         items: [
             {
                 icon: '📶', title: { it: 'WiFi', en: 'WiFi', fr: 'WiFi', es: 'WiFi' },
-                desc: { it: 'Rete: <strong>La Maison de Tante Rosa</strong> — Password: <strong>Tanterosa</strong>', en: 'Network: <strong>La Maison de Tante Rosa</strong> — Password: <strong>Tanterosa</strong>', fr: 'Réseau : <strong>La Maison de Tante Rosa</strong> — Mot de passe : <strong>Tanterosa</strong>', es: 'Red: <strong>La Maison de Tante Rosa</strong> — Contraseña: <strong>Tanterosa</strong>' }
+                desc: { it: 'Rete: <strong>La Maison de Tante Rosa</strong> — Password: <strong>tanterosa</strong> (tutto minuscolo)', en: 'Network: <strong>La Maison de Tante Rosa</strong> — Password: <strong>tanterosa</strong> (all lowercase)', fr: 'Réseau : <strong>La Maison de Tante Rosa</strong> — Mot de passe : <strong>tanterosa</strong> (tout en minuscules)', es: 'Red: <strong>La Maison de Tante Rosa</strong> — Contraseña: <strong>tanterosa</strong> (todo en minúsculas)' }
             },
             {
                 icon: '🤫', title: { it: 'Silenzio', en: 'Quiet Hours', fr: 'Heures de Silence', es: 'Horas de Silencio' },
