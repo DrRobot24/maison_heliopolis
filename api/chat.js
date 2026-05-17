@@ -1,6 +1,6 @@
 const Anthropic = require('@anthropic-ai/sdk');
 
-const client = new Anthropic();
+const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 const SYSTEM_PROMPT = `You are Ciccio, the virtual concierge of "La Maison de tante Rosa", a holiday apartment in the historic center of Syracuse, Sicily, Italy.
 
