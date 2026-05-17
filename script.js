@@ -631,6 +631,13 @@ document.addEventListener('DOMContentLoaded', () => {
       <circle cx="23" cy="41" r="0.7" fill="#C07850" opacity="0.45"/>
       <circle cx="27" cy="41" r="0.7" fill="#C07850" opacity="0.45"/>
       <circle cx="30" cy="39" r="0.7" fill="#C07850" opacity="0.45"/>
+      <line x1="34" y1="37" x2="42" y2="47" stroke="#3A6B2A" stroke-width="1.8" stroke-linecap="round"/>
+      <ellipse cx="38.5" cy="42.5" rx="2.2" ry="1.1" fill="#4E8B3A" transform="rotate(-45 38.5 42.5)"/>
+      <circle cx="33.5" cy="36" r="2.8" fill="#B02040"/>
+      <circle cx="35.5" cy="34.8" r="2.2" fill="#CC2E50"/>
+      <circle cx="32.5" cy="34.5" r="1.8" fill="#E03060"/>
+      <circle cx="34.2" cy="33.8" r="1.4" fill="#F04070"/>
+      <circle cx="34" cy="35.2" r="0.9" fill="#FF6088"/>
     </svg>`;
 
     const WELCOME = {
