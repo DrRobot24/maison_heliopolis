@@ -601,6 +601,142 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
       });
     });
+
+    initChatbot();
+  }
+
+  function initChatbot() {
+    const WELCOME = {
+      it: 'Bonjour! 🌹 Sono Rose, la vostra concierge virtuale. Come posso aiutarvi?',
+      en: 'Bonjour! 🌹 I\'m Rose, your virtual concierge. How can I help you today?',
+      fr: 'Bonjour! 🌹 Je suis Rose, votre concierge virtuelle. Comment puis-je vous aider ?',
+      es: 'Bonjour! 🌹 Soy Rose, su concierge virtual. ¿En qué puedo ayudarle hoy?'
+    };
+    const PLACEHOLDER = {
+      it: 'Scrivi un messaggio…',
+      en: 'Write a message…',
+      fr: 'Écrivez un message…',
+      es: 'Escribe un mensaje…'
+    };
+    const ERR_MSG = {
+      it: 'Mi dispiace, si è verificato un errore. Riprova tra poco.',
+      en: 'Sorry, something went wrong. Please try again.',
+      fr: 'Désolée, une erreur s\'est produite. Réessayez.',
+      es: 'Lo siento, ha ocurrido un error. Inténtelo de nuevo.'
+    };
+
+    const widget = document.createElement('div');
+    widget.id = 'chat-widget';
+    widget.innerHTML = `
+      <button id="chat-toggle" aria-label="Chat with Rose">🌹</button>
+      <div id="chat-panel" role="dialog" aria-label="Rose — Concierge">
+        <div class="chat-header">
+          <div class="chat-header-info">
+            <div class="chat-avatar">🌹</div>
+            <div>
+              <div class="chat-name">Rose</div>
+              <div class="chat-status">Concierge &middot; La Maison</div>
+            </div>
+          </div>
+          <button id="chat-close" aria-label="Close">&times;</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+          <div class="chat-msg chat-msg--rose">
+            <div class="chat-bubble">${WELCOME[currentLang] || WELCOME.en}</div>
+          </div>
+        </div>
+        <div class="chat-input-area">
+          <input id="chat-input" type="text" placeholder="${PLACEHOLDER[currentLang] || PLACEHOLDER.en}" autocomplete="off" maxlength="500">
+          <button id="chat-send" aria-label="Send">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          </button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(widget);
+
+    const panel   = document.getElementById('chat-panel');
+    const closeBtn = document.getElementById('chat-close');
+    const input   = document.getElementById('chat-input');
+    const sendBtn  = document.getElementById('chat-send');
+    const msgArea  = document.getElementById('chat-messages');
+
+    let history = [];
+    let busy = false;
+
+    document.getElementById('chat-toggle').addEventListener('click', () => {
+      panel.classList.toggle('open');
+      if (panel.classList.contains('open')) setTimeout(() => input.focus(), 260);
+    });
+
+    closeBtn.addEventListener('click', () => panel.classList.remove('open'));
+
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); }
+    });
+    sendBtn.addEventListener('click', send);
+
+    function addBubble(role, text) {
+      const wrap = document.createElement('div');
+      wrap.className = `chat-msg chat-msg--${role === 'user' ? 'user' : 'rose'}`;
+      const bubble = document.createElement('div');
+      bubble.className = 'chat-bubble';
+      bubble.textContent = text;
+      wrap.appendChild(bubble);
+      msgArea.appendChild(wrap);
+      msgArea.scrollTop = msgArea.scrollHeight;
+    }
+
+    function showTyping() {
+      const div = document.createElement('div');
+      div.id = 'chat-typing-indicator';
+      div.className = 'chat-msg chat-msg--rose';
+      div.innerHTML = '<div class="chat-bubble chat-typing"><span></span><span></span><span></span></div>';
+      msgArea.appendChild(div);
+      msgArea.scrollTop = msgArea.scrollHeight;
+    }
+
+    function hideTyping() {
+      document.getElementById('chat-typing-indicator')?.remove();
+    }
+
+    async function send() {
+      const text = input.value.trim();
+      if (!text || busy) return;
+
+      input.value = '';
+      busy = true;
+      sendBtn.disabled = true;
+
+      addBubble('user', text);
+      history.push({ role: 'user', content: text });
+      showTyping();
+
+      try {
+        const res = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ messages: history })
+        });
+        hideTyping();
+
+        if (!res.ok) throw new Error('api_error');
+
+        const data = await res.json();
+        addBubble('assistant', data.content);
+        history.push({ role: 'assistant', content: data.content });
+
+        if (history.length > 20) history = history.slice(-20);
+
+      } catch (_) {
+        hideTyping();
+        addBubble('assistant', ERR_MSG[currentLang] || ERR_MSG.en);
+      }
+
+      busy = false;
+      sendBtn.disabled = false;
+      input.focus();
+    }
   }
 
 });
