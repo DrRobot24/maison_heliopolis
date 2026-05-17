@@ -300,16 +300,16 @@ a:hover {
 }
 
 .checkin-footer-dark .footer-cin {
-  color: var(--beige);
+  color: var(--white);
 }
 
 .checkin-footer-dark p {
-  color: var(--beige-dark);
+  color: var(--white);
 }
 
 .checkin-footer-dark .footer-credit {
   font-size: 0.8rem;
-  color: var(--beige-dark);
+  color: var(--white);
   opacity: 0.7;
   font-style: normal;
 }
@@ -1461,7 +1461,7 @@ a.restaurant-item:hover .restaurant-arrow {
 
 .footer {
   background: var(--charcoal);
-  color: var(--beige);
+  color: var(--white);
   padding: 28px 0 18px;
   text-align: center;
 }
@@ -1477,13 +1477,13 @@ a.restaurant-item:hover .restaurant-arrow {
   font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--beige);
+  color: var(--white);
   letter-spacing: 0.1em;
   margin-bottom: 8px;
 }
 
 .footer p {
-  color: var(--beige-dark);
+  color: var(--white);
   font-size: 0.9rem;
 }
 
@@ -1497,7 +1497,7 @@ a.restaurant-item:hover .restaurant-arrow {
 
 .footer-credit {
   font-size: 0.8rem;
-  color: var(--beige-dark);
+  color: var(--white);
   opacity: 0.7;
 }
 
@@ -1517,7 +1517,7 @@ a.restaurant-item:hover .restaurant-arrow {
 }
 
 .footer-legal-link {
-  color: var(--beige-dark);
+  color: var(--white);
   text-decoration: none;
   opacity: 0.7;
   transition: opacity 0.3s ease, color 0.3s ease;
@@ -1538,7 +1538,7 @@ a.restaurant-item:hover .restaurant-arrow {
   left: 0;
   right: 0;
   background: rgba(55, 47, 42, 0.97);
-  color: var(--beige);
+  color: var(--white);
   padding: 18px 24px;
   z-index: 10000;
   display: flex;
@@ -1555,6 +1555,7 @@ a.restaurant-item:hover .restaurant-arrow {
   margin: 0;
   max-width: 600px;
   text-align: center;
+  color: var(--white);
 }
 
 .cookie-banner-actions {
