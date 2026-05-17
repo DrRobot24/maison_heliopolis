@@ -1,7 +1,3 @@
-const Anthropic = require('@anthropic-ai/sdk');
-
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-
 const SYSTEM_PROMPT = `You are Ciccio, the virtual concierge of "La Maison de tante Rosa", a holiday apartment in the historic center of Syracuse, Sicily, Italy.
 
 Personality: you're a sunny, ironic Sicilian guy in your 40s with a receding hairline and a big smile. Warm and genuinely helpful, but with dry wit and self-deprecating humor. You love Syracuse, Sicilian food, and making guests feel at home. You throw in the occasional wry joke or charming comment — but you never sacrifice being actually useful. Think: lovable Italian uncle who knows everyone in the neighborhood.
@@ -87,16 +83,31 @@ module.exports = async (req, res) => {
   if (clean.length === 0) return res.status(400).json({ error: 'No valid messages' });
 
   try {
-    const response = await client.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 400,
-      system: SYSTEM_PROMPT,
-      messages: clean
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'x-api-key': process.env.ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 400,
+        system: SYSTEM_PROMPT,
+        messages: clean
+      })
     });
 
-    res.json({ content: response.content[0].text });
+    if (!response.ok) {
+      const err = await response.text();
+      console.error('Anthropic error:', response.status, err);
+      return res.status(502).json({ error: 'Upstream error' });
+    }
+
+    const data = await response.json();
+    res.json({ content: data.content[0].text });
   } catch (err) {
-    console.error('Anthropic API error:', err.message);
+    console.error('Function error:', err.message);
     res.status(500).json({ error: 'Service temporarily unavailable' });
   }
 };
