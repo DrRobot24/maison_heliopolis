@@ -2002,13 +2002,14 @@ a[data-lang].lang-active {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: var(--charcoal);
-  border: none;
+  background: var(--beige);
+  border: 2px solid var(--charcoal);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  overflow: hidden;
+  padding: 4px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.28);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -2063,11 +2064,12 @@ a[data-lang].lang-active {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: var(--rose);
+  background: var(--beige);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.15rem;
+  overflow: hidden;
+  padding: 2px;
   flex-shrink: 0;
 }
 

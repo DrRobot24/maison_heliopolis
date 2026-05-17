@@ -606,12 +606,41 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function initChatbot() {
+    const CICCIO_SVG = `<svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+      <ellipse cx="7" cy="27" rx="3.5" ry="4.5" fill="#E8A882"/>
+      <ellipse cx="43" cy="27" rx="3.5" ry="4.5" fill="#E8A882"/>
+      <ellipse cx="25" cy="27" rx="18" ry="19" fill="#F5C5A3"/>
+      <path d="M8 20 Q10 9 19 7" stroke="#5C3317" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+      <path d="M42 20 Q40 9 31 7" stroke="#5C3317" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+      <path d="M9 19 Q25 14 41 19" stroke="#5C3317" stroke-width="2.5" fill="none" opacity="0.35"/>
+      <path d="M13 20 Q17 17 21 19" stroke="#5C3317" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M29 18 Q33 16 37 19" stroke="#5C3317" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <ellipse cx="17" cy="25" rx="3" ry="2.2" fill="#3D2B1F"/>
+      <ellipse cx="33" cy="25" rx="3" ry="2.2" fill="#3D2B1F"/>
+      <circle cx="18.2" cy="23.8" r="1" fill="white"/>
+      <circle cx="34.2" cy="23.8" r="1" fill="white"/>
+      <path d="M23 30 Q25 33 27 30" stroke="#C07850" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M15 36 Q25 45 35 36" fill="white" opacity="0.9"/>
+      <path d="M15 36 Q25 45 35 36" stroke="#C0604A" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path d="M15 36 Q25 39 35 36" stroke="#C0604A" stroke-width="1" fill="none" opacity="0.4"/>
+      <ellipse cx="11" cy="31" rx="4" ry="2.5" fill="#F08070" opacity="0.28"/>
+      <ellipse cx="39" cy="31" rx="4" ry="2.5" fill="#F08070" opacity="0.28"/>
+      <path d="M12 30 Q10 33 12 37" stroke="#D4956A" stroke-width="1" fill="none" opacity="0.5" stroke-linecap="round"/>
+      <path d="M38 30 Q40 33 38 37" stroke="#D4956A" stroke-width="1" fill="none" opacity="0.5" stroke-linecap="round"/>
+      <circle cx="20" cy="39" r="0.7" fill="#C07850" opacity="0.45"/>
+      <circle cx="23" cy="41" r="0.7" fill="#C07850" opacity="0.45"/>
+      <circle cx="27" cy="41" r="0.7" fill="#C07850" opacity="0.45"/>
+      <circle cx="30" cy="39" r="0.7" fill="#C07850" opacity="0.45"/>
+    </svg>`;
+
     const WELCOME = {
-      it: 'Bonjour! 🌹 Sono Rose, la vostra concierge virtuale. Come posso aiutarvi?',
-      en: 'Bonjour! 🌹 I\'m Rose, your virtual concierge. How can I help you today?',
-      fr: 'Bonjour! 🌹 Je suis Rose, votre concierge virtuelle. Comment puis-je vous aider ?',
-      es: 'Bonjour! 🌹 Soy Rose, su concierge virtual. ¿En qué puedo ayudarle hoy?'
+      it: 'Ciao! 😄 Sono Ciccio, il vostro concierge virtuale. Ortigia la conosco palmo a palmo — chiedetemi pure tutto!',
+      en: 'Hey there! 😄 I\'m Ciccio, your virtual concierge. I know Ortigia like the back of my hand — ask me anything!',
+      fr: 'Salut ! 😄 Je suis Ciccio, votre concierge virtuel. Je connais Ortigia comme ma poche — posez-moi toutes vos questions !',
+      es: '¡Hola! 😄 Soy Ciccio, su concierge virtual. Conozco Ortigia como la palma de mi mano — ¡pregúntenme lo que quieran!'
     };
+    // ?',
+      //🌹
     const PLACEHOLDER = {
       it: 'Scrivi un messaggio…',
       en: 'Write a message…',
@@ -628,13 +657,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const widget = document.createElement('div');
     widget.id = 'chat-widget';
     widget.innerHTML = `
-      <button id="chat-toggle" aria-label="Chat with Rose">🌹</button>
-      <div id="chat-panel" role="dialog" aria-label="Rose — Concierge">
+      <button id="chat-toggle" aria-label="Chat with Ciccio">${CICCIO_SVG}</button>
+      <div id="chat-panel" role="dialog" aria-label="Ciccio — Concierge">
         <div class="chat-header">
           <div class="chat-header-info">
-            <div class="chat-avatar">🌹</div>
+            <div class="chat-avatar">${CICCIO_SVG}</div>
             <div>
-              <div class="chat-name">Rose</div>
+              <div class="chat-name">Ciccio</div>
               <div class="chat-status">Concierge &middot; La Maison</div>
             </div>
           </div>
