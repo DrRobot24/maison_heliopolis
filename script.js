@@ -613,19 +613,17 @@ document.addEventListener('DOMContentLoaded', () => {
       <circle cx="23" cy="41" r="0.7" fill="#C07850" opacity="0.45"/>
       <circle cx="27" cy="41" r="0.7" fill="#C07850" opacity="0.45"/>
       <circle cx="30" cy="39" r="0.7" fill="#C07850" opacity="0.45"/>
-      <line x1="35.5" y1="38" x2="37" y2="42" stroke="#2D5A1B" stroke-width="1.8" stroke-linecap="round"/>
-      <path d="M34.5 38 Q35.5 40 36.5 38" fill="#3A7A24"/>
-      <path d="M33 36.5 Q32.5 33 35.5 32.5 Q38.5 33 38 36.5 Q37 38.5 35.5 38.5 Q34 38.5 33 36.5Z" fill="#AA1830"/>
-      <path d="M34 36 Q33.5 33.5 35.5 33 Q37.5 33.5 37 36 Q36.2 37.8 35.5 37.8 Q34.8 37.8 34 36Z" fill="#CC2848"/>
-      <path d="M34.8 35.5 Q34.4 33.8 35.5 33.5 Q36.6 33.8 36.2 35.5 Q35.8 37 35.5 37 Q35.2 37 34.8 35.5Z" fill="#E03A5E"/>
-      <path d="M35.5 34 Q35.8 32.8 36.2 34" stroke="#F86080" stroke-width="0.7" fill="none" stroke-linecap="round"/>
+      <ellipse cx="25" cy="6" rx="8" ry="5.5" fill="#E8D820" transform="rotate(-15 25 6)"/>
+      <ellipse cx="24" cy="5.5" rx="5" ry="3.5" fill="#F4EC50" transform="rotate(-15 25 6)"/>
+      <path d="M24 1.5 Q27 0 30 2" stroke="#3A7020" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+      <path d="M29.5 2 Q32 1 32.5 3.5" stroke="#3A7020" stroke-width="0.9" fill="none" stroke-linecap="round"/>
     </svg>`;
 
     const WELCOME = {
-      it: 'Ciao! 😄 Sono Ciccio, il vostro concierge virtuale. Ortigia la conosco palmo a palmo — chiedetemi pure tutto!',
-      en: 'Hey there! 😄 I\'m Ciccio, your virtual concierge. I know Ortigia like the back of my hand — ask me anything!',
-      fr: 'Salut ! 😄 Je suis Ciccio, votre concierge virtuel. Je connais Ortigia comme ma poche — posez-moi toutes vos questions !',
-      es: '¡Hola! 😄 Soy Ciccio, su concierge virtual. Conozco Ortigia como la palma de mi mano — ¡pregúntenme lo que quieran!'
+      it: 'Ciao! 😄 Sono Cicciobot, il vostro concierge virtuale. Ortigia la conosco palmo a palmo — chiedetemi pure tutto!',
+      en: 'Hey there! 😄 I\'m Cicciobot, your virtual concierge. I know Ortigia like the back of my hand — ask me anything!',
+      fr: 'Salut ! 😄 Je suis Cicciobot, votre concierge virtuel. Je connais Ortigia comme ma poche — posez-moi toutes vos questions !',
+      es: '¡Hola! 😄 Soy Cicciobot, su concierge virtual. Conozco Ortigia como la palma de mi mano — ¡pregúntenme lo que quieran!'
     };
     // ?',
       //🌹
@@ -645,14 +643,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const widget = document.createElement('div');
     widget.id = 'chat-widget';
     widget.innerHTML = `
-      <button id="chat-toggle" aria-label="Chat with Ciccio">${CICCIO_SVG}</button>
-      <div id="chat-panel" role="dialog" aria-label="Ciccio — Concierge">
+      <button id="chat-toggle" aria-label="Chat with Cicciobot">${CICCIO_SVG}</button>
+      <div id="chat-panel" role="dialog" aria-label="Cicciobot — Concierge">
         <div class="chat-header">
           <div class="chat-header-info">
             <div class="chat-avatar">${CICCIO_SVG}</div>
             <div>
-              <div class="chat-name">Ciccio</div>
-              <div class="chat-status">Concierge &middot; La Maison</div>
+              <div class="chat-name">Cicciobot</div>
+              <div class="chat-status">Concierge &middot; Heliopolis</div>
             </div>
           </div>
           <button id="chat-close" aria-label="Close">&times;</button>
