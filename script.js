@@ -155,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <footer class="checkin-landing__footer checkin-footer-dark">
         <div class="footer-brand">Maison Heliopolis</div>
+        <div class="footer-cin">CIN: IT089017C2DKRZXJTO — CIR: 19089017C265790</div>
         <div class="footer-divider"></div>
         <p>${t(T.checkinLanding.footer)}</p>
         <div class="footer-divider"></div>
@@ -233,6 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <h1>Maison Heliopolis</h1>
         <p class="hero-tagline">${t(T.hero.tagline)}</p>
         <div class="hero-location">${SVG.pin} ${t(T.hero.location)}</div>
+        <div class="hero-cin">CIN: IT089017C2DKRZXJTO — CIR: 19089017C265790</div>
         <p class="section-subtitle" style="margin-bottom:20px">${t(T.hero.selectLang)}</p>
         <div class="lang-selector">
           <button class="lang-btn ${currentLang === 'it' ? 'active' : ''}" data-set-lang="it">🇮🇹 Italiano</button>
@@ -386,6 +388,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <footer class="footer">
       <div class="container">
         <div class="footer-brand">Maison Heliopolis</div>
+        <div class="footer-cin">CIN: IT089017C2DKRZXJTO — CIR: 19089017C265790</div>
         <div class="footer-divider"></div>
         <p>${t(T.footer.madeWith)}</p>
         <div class="footer-divider"></div>
