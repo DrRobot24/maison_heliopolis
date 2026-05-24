@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Falling petals on check-in page
     const landing = document.querySelector('.checkin-landing');
     if (landing) {
-      const petals = ['🌹', '🥀', '🌸', '🪻'];
+      const petals = ['🍋', '🍋', '🍋', '🌿'];
       function spawnPetal() {
         const el = document.createElement('span');
         el.className = 'petal';
@@ -519,7 +519,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Falling rose petals in hero
     const hero = document.querySelector('.hero');
     if (hero) {
-      const petals = ['🌹', '🥀', '🌸', '🪻'];
+      const petals = ['🍋', '🍋', '🍋', '🌿'];
       function spawnPetal() {
         const el = document.createElement('span');
         el.className = 'petal';
