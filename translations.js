@@ -48,44 +48,46 @@ const T = {
             es: 'Siga estos sencillos pasos para acceder a su habitación'
         },
         step1title: {
-            it: 'Arrivate al civico', en: 'Arrive at the building',
-            fr: 'Arrivez au numéro civil', es: 'Llegue al número'
+            it: 'Avvisate del vostro arrivo',
+            en: 'Notify your arrival',
+            fr: 'Signalez votre arrivée',
+            es: 'Avise de su llegada'
         },
         step1text: {
-            it: 'L\'indirizzo è <strong>Via Bainsizza 94</strong>. Per aprire il portone d\'ingresso, inserite il PIN nel tastierino. <strong>Il PIN vi verrà comunicato dall\'host via WhatsApp.</strong>',
-            en: 'The address is <strong>Via Bainsizza 94</strong>. To open the main entrance door, enter the PIN on the keypad. <strong>The PIN will be sent to you by the host via WhatsApp.</strong>',
-            fr: 'L\'adresse est <strong>Via Bainsizza 94</strong>. Pour ouvrir la porte d\'entrée principale, saisissez le PIN sur le clavier. <strong>Le PIN vous sera communiqué par l\'hôte via WhatsApp.</strong>',
-            es: 'La dirección es <strong>Via Bainsizza 94</strong>. Para abrir la puerta de entrada principal, introduzca el PIN en el teclado. <strong>El PIN le será comunicado por el anfitrión via WhatsApp.</strong>'
+            it: 'L\'indirizzo è <strong>Via Bainsizza n. 94</strong>. Al momento dell\'arrivo, davanti al portone di ingresso della struttura, avvisate per messaggio al <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a> oppure digitate nella tastiera il codice, se trasmesso precedentemente dall\'Host.',
+            en: 'The address is <strong>Via Bainsizza n. 94</strong>. Upon arrival, in front of the building entrance, notify us by message at <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a> or enter the code on the keypad, if previously sent by the Host.',
+            fr: 'L\'adresse est <strong>Via Bainsizza n. 94</strong>. À votre arrivée, devant l\'entrée de la structure, prévenez-nous par message au <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a> ou composez le code sur le clavier, si transmis au préalable par l\'Hôte.',
+            es: 'La dirección es <strong>Via Bainsizza n. 94</strong>. A su llegada, frente a la entrada del edificio, avísenos por mensaje al <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a> o introduzca el código en el teclado, si fue enviado previamente por el Anfitrión.'
         },
         step2title: {
-            it: 'Avvisate l\'host', en: 'Notify the host',
-            fr: 'Prévenez l\'hôte', es: 'Avise al anfitrión'
+            it: 'Camera', en: 'Your Room',
+            fr: 'Votre Chambre', es: 'Su Habitación'
         },
         step2text: {
-            it: 'Davanti alla porta della camera, mandate un messaggio WhatsApp al <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a>.',
-            en: 'In front of the room door, send a WhatsApp message to <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a>.',
-            fr: 'Devant la porte de la chambre, envoyez un message WhatsApp au <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a>.',
-            es: 'Frente a la puerta de la habitación, envíe un mensaje de WhatsApp al <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a>.'
+            it: 'La Vostra camera è la numero {{room}}. La porta si aprirà in automatico oppure digitate il codice nella maniglia, se comunicato dall\'Host precedentemente.',
+            en: 'Your room is number {{room}}. The door will open automatically or enter the code on the handle, if previously communicated by the Host.',
+            fr: 'Votre chambre est le numéro {{room}}. La porte s\'ouvrira automatiquement ou composez le code sur la poignée, si communiqué au préalable par l\'Hôte.',
+            es: 'Su habitación es el número {{room}}. La puerta se abrirá automáticamente o introduzca el código en el tirador, si fue comunicado previamente por el Anfitrión.'
         },
         step3title: {
-            it: 'Trovate la vostra camera', en: 'Find your room',
-            fr: 'Trouvez votre chambre', es: 'Encuentre su habitación'
+            it: 'Attivate l\'Elettricità', en: 'Activate Electricity',
+            fr: 'Activez l\'Électricité', es: 'Active la Electricidad'
         },
         step3text: {
-            it: 'La camera è contrassegnata dal numero comunicato in precedenza dall\'host.',
-            en: 'The room is marked with the number previously communicated by the host.',
-            fr: 'La chambre est identifiée par le numéro communiqué au préalable par l\'hôte.',
-            es: 'La habitación está señalizada con el número comunicado previamente por el anfitrión.'
+            it: 'All\'interno della camera, sopra il tavolo troverete una card. La card deve essere inserita nell\'apposita tasca a muro per dare alimentazione elettrica alla camera.',
+            en: 'Inside the room, on the table you will find a card. The card must be inserted in the wall slot to power the room.',
+            fr: 'À l\'intérieur de la chambre, sur la table vous trouverez une carte. La carte doit être insérée dans la pochette murale pour alimenter la chambre en électricité.',
+            es: 'Dentro de la habitación, sobre la mesa encontrará una tarjeta. La tarjeta debe insertarse en la ranura de la pared para dar alimentación eléctrica a la habitación.'
         },
         step4title: {
-            it: 'La porta si aprirà', en: 'The door will open',
-            fr: 'La porte s\'ouvrira', es: 'La puerta se abrirá'
+            it: 'Utilizzo Card', en: 'Card Usage',
+            fr: 'Utilisation de la Carte', es: 'Uso de la Tarjeta'
         },
         step4text: {
-            it: 'La porta della camera si aprirà in automatico.',
-            en: 'The room door will open automatically.',
-            fr: 'La porte de la chambre s\'ouvrira automatiquement.',
-            es: 'La puerta de la habitación se abrirá automáticamente.'
+            it: 'La Card apre la porta della camera e il portone di ingresso della struttura.',
+            en: 'The Card opens the room door and the main entrance door of the building.',
+            fr: 'La carte ouvre la porte de la chambre et le portail d\'entrée de la structure.',
+            es: 'La tarjeta abre la puerta de la habitación y el portón de entrada del edificio.'
         },
         step5title: {
             it: 'Attivate l\'elettricità', en: 'Activate electricity',
@@ -141,15 +143,15 @@ const T = {
             },
             {
                 icon: '💇', title: { it: 'Phon', en: 'Hair Dryer', fr: 'Sèche-Cheveux', es: 'Secador de Pelo' },
-                desc: { it: 'L\'asciugacapelli si trova all\'interno dell\'armadio', en: 'The hair dryer is located inside the wardrobe', fr: 'Le sèche-cheveux se trouve dans l\'armoire', es: 'El secador de pelo se encuentra dentro del armario' }
+                desc: { it: 'L\'asciugacapelli si trova nello sgabello dentro il bagno', en: 'The hair dryer is located in the stool inside the bathroom', fr: 'Le sèche-cheveux se trouve dans le tabouret dans la salle de bain', es: 'El secador de pelo se encuentra en el taburete dentro del baño' }
             },
             {
                 icon: '🎁', title: { it: 'Welcome Kit', en: 'Welcome Kit', fr: 'Kit de Bienvenue', es: 'Kit de Bienvenida' },
                 desc: {
-                    it: 'All\'interno del frigorifero troverete il vostro <strong>Welcome Kit</strong> con acqua, cialde per il caffè (potete utilizzare la macchinetta a vostra disposizione) e bustine di tè e infusi da preparare con il bollitore. Tutto a vostra disposizione per l\'intero soggiorno!',
-                    en: 'Inside the fridge you will find your <strong>Welcome Kit</strong> with water, coffee pods (you can use the coffee machine provided) and tea bags and herbal infusions to prepare with the kettle. Everything is at your disposal for your entire stay!',
-                    fr: 'Dans le réfrigérateur, vous trouverez votre <strong>Welcome Kit</strong> avec de l\'eau, des dosettes de café (vous pouvez utiliser la machine à café mise à disposition) et des sachets de thé et infusions à préparer avec la bouilloire. Tout est à votre disposition pendant tout votre séjour !',
-                    es: 'Dentro de la nevera encontrará su <strong>Welcome Kit</strong> con agua, cápsulas de café (puede usar la cafetera a su disposición) y bolsitas de té e infusiones para preparar con el hervidor. ¡Todo a su disposición durante toda su estancia!'
+                    it: 'Il nostro <strong>Welcome Kit</strong> prevede, all\'interno del frigorifero, dell\'acqua. Cialde per il caffè, infusi e tè sono a Vostra disposizione.',
+                    en: 'Our <strong>Welcome Kit</strong> includes water inside the refrigerator. Coffee pods, herbal infusions and tea are at your disposal.',
+                    fr: 'Notre <strong>Welcome Kit</strong> comprend de l\'eau à l\'intérieur du réfrigérateur. Des dosettes de café, des infusions et du thé sont à votre disposition.',
+                    es: 'Nuestro <strong>Welcome Kit</strong> incluye agua dentro del refrigerador. Cápsulas de café, infusiones y té están a su disposición.'
                 }
             },
             {
@@ -293,10 +295,10 @@ const T = {
             es: 'Escriba una reseña en Google'
         },
         thanks: {
-            it: 'Grazie di cuore! 🌹',
-            en: 'Thank you so much! 🌹',
-            fr: 'Merci de tout cœur ! 🌹',
-            es: '¡Muchas gracias! 🌹'
+            it: 'Grazie di cuore! 💛',
+            en: 'Thank you so much! 💛',
+            fr: 'Merci de tout cœur ! 💛',
+            es: '¡Muchas gracias! 💛'
         }
     },
     checkinLanding: {

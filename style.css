@@ -1898,6 +1898,9 @@ a.restaurant-item:hover .restaurant-arrow {
   .map-wrapper iframe {
     height: 300px;
   }
+
+  .footer-cin .cin-sep { display: none; }
+  .footer-cin .cin-item { display: block; }
 }
 
 @media (max-width: 480px) {
