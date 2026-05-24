@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="hero-content">
         <img src="public/logo_heliopolis.jpeg" alt="Maison Heliopolis" class="hero-logo">
         <p class="hero-eyebrow">${t(T.hero.eyebrow)}</p>
-        <h1>Maison Heliopolis</h1>
+        <h1>Heliopolis</h1>
         <p class="hero-tagline">${t(T.hero.tagline)}</p>
         <div class="hero-location">${SVG.pin} ${t(T.hero.location)}</div>
         <div class="hero-cin">CIN: IT089017C2DKRZXJTO — CIR: 19089017C265790</div>
