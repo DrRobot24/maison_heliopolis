@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ================================================================
   function renderCheckinLanding() {
     const app = document.getElementById('app');
-    document.title = `Check-in — Maison Heliopolis`;
+    document.title = `Check-in — Heliopolis`;
 
     app.innerHTML = `
     <div class="checkin-landing">
@@ -130,8 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="checkin-landing__corner checkin-landing__corner--br">${SVG.corner}</div>
 
       <div class="checkin-landing__card">
-        <img src="public/logo_heliopolis.jpeg" alt="Maison Heliopolis" class="checkin-landing__logo">
-        <div class="checkin-landing__brand">Maison Heliopolis</div>
+        <img src="public/logo_heliopolis.jpeg" alt="Heliopolis" class="checkin-landing__logo">
+        <div class="checkin-landing__brand">Heliopolis</div>
         <div class="checkin-landing__room-badge">${roomDisplayName(checkinRoom)}</div>
         <h1 class="checkin-landing__title">${t(T.checkin.title)}</h1>
         <p class="checkin-landing__subtitle">${t(T.checkin.subtitle)}</p>
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
 
       <footer class="checkin-landing__footer checkin-footer-dark">
-        <div class="footer-brand">Maison Heliopolis</div>
+        <div class="footer-brand">Heliopolis</div>
         <div class="footer-cin">CIN: IT089017C2DKRZXJTO — CIR: 19089017C265790</div>
         <div class="footer-divider"></div>
         <p>${t(T.checkinLanding.footer)}</p>
@@ -208,10 +208,10 @@ document.addEventListener('DOMContentLoaded', () => {
     <!-- Navigation -->
     <nav class="nav" id="navbar">
       <div class="container">
-        <a href="#" class="nav-brand" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Maison Heliopolis</a>
+        <a href="#" class="nav-brand" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Heliopolis</a>
         <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
         <ul class="nav-links">
-          <li class="nav-mobile-brand"><span class="nav-mobile-rose">☀️</span><span>Maison Heliopolis</span></li>
+          <li class="nav-mobile-brand"><span class="nav-mobile-rose">☀️</span><span>Heliopolis</span></li>
           <li><a href="#checkout">${t(T.nav.checkout)}</a></li>
           <li><a href="#rules">${t(T.nav.rules)}</a></li>
           <li><a href="#explore">${t(T.nav.explore)}</a></li>
@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="hero-corner hero-corner--bl">${SVG.corner}</div>
       <div class="hero-corner hero-corner--br">${SVG.corner}</div>
       <div class="hero-content">
-        <img src="public/logo_heliopolis.jpeg" alt="Maison Heliopolis" class="hero-logo">
+        <img src="public/logo_heliopolis.jpeg" alt="Heliopolis" class="hero-logo">
         <p class="hero-eyebrow">${t(T.hero.eyebrow)}</p>
         <h1>Heliopolis</h1>
         <p class="hero-tagline">${t(T.hero.tagline)}</p>
@@ -387,7 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <div class="footer-brand">Maison Heliopolis</div>
+        <div class="footer-brand">Heliopolis</div>
         <div class="footer-cin">CIN: IT089017C2DKRZXJTO — CIR: 19089017C265790</div>
         <div class="footer-divider"></div>
         <p>${t(T.footer.madeWith)}</p>
