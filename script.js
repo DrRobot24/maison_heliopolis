@@ -1,5 +1,5 @@
 /* ============================================
-   La Maison de tante Rosa — App Engine
+   Heliopolis — App Engine
    ============================================
    
    TWO MODES:
@@ -414,7 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <button class="legal-modal-close">&times;</button>
         <h2>${t(T.cookie.privacyTitle)}</h2>
         <div class="legal-modal-body">
-          <p><strong>Titolare del trattamento:</strong> Maison Heliopolis — Via Bainsizza 94, 96100 Siracusa (SR), Italia.</p>
+          <p><strong>Titolare del trattamento:</strong> Heliopolis — Via Bainsizza 94, 96100 Siracusa (SR), Italia.</p>
           <p><strong>Dati raccolti:</strong> Il sito non raccoglie dati personali direttamente. Tuttavia, servizi di terze parti incorporati (Google Maps) possono raccogliere dati di navigazione, indirizzo IP e cookie tecnici.</p>
           <p><strong>Finalità:</strong> I dati trattati dai servizi terzi sono utilizzati esclusivamente per il funzionamento della mappa interattiva e per migliorare l'esperienza di navigazione.</p>
           <p><strong>Base giuridica:</strong> Legittimo interesse (Art. 6, par. 1, lett. f GDPR) per i cookie tecnici; consenso (Art. 6, par. 1, lett. a GDPR) per i cookie di terze parti.</p>

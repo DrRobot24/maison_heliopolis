@@ -1,10 +1,10 @@
-# Maison Heliopolis
+# Heliopolis
 
-Landing page / guida digitale per gli ospiti di **Maison Heliopolis** a Siracusa, Sicilia.
+Landing page / guida digitale per gli ospiti di **Heliopolis** a Siracusa, Sicilia.
 
 ## Dati struttura
 
-- **Nome:** Maison Heliopolis
+- **Nome:** Heliopolis
 - **Indirizzo:** Via Bainsizza 94, 96100 Siracusa (SR)
 - **Ospiti massimi:** 3
 - **Camera 1:** letto matrimoniale + lettino singolo

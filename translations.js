@@ -33,10 +33,10 @@ const T = {
             es: 'Estamos encantados de darles la bienvenida a nuestra casa de vacaciones'
         },
         text: {
-            it: 'Maison Heliopolis è un\'accogliente dimora situata nel centro storico di Siracusa, a pochi passi dall\'isola di Ortigia e dai principali monumenti. Questa guida vi aiuterà ad orientarvi durante il vostro soggiorno.',
-            en: 'Maison Heliopolis is a cozy residence located in the historic center of Syracuse, just steps from the island of Ortigia and the main monuments. This guide will help you navigate your stay.',
-            fr: 'Maison Heliopolis est une résidence chaleureuse située dans le centre historique de Syracuse, à quelques pas de l\'île d\'Ortigia et des principaux monuments. Ce guide vous aidera à vous orienter pendant votre séjour.',
-            es: 'Maison Heliopolis es una acogedora residencia situada en el centro histórico de Siracusa, a pocos pasos de la isla de Ortigia y de los principales monumentos. Esta guía le ayudará a orientarse durante su estancia.'
+            it: 'Heliopolis è un\'accogliente dimora situata nel centro storico di Siracusa, a pochi passi dall\'isola di Ortigia e dai principali monumenti. Questa guida vi aiuterà ad orientarvi durante il vostro soggiorno.',
+            en: 'Heliopolis is a cozy residence located in the historic center of Syracuse, just steps from the island of Ortigia and the main monuments. This guide will help you navigate your stay.',
+            fr: 'Heliopolis est une résidence chaleureuse située dans le centre historique de Syracuse, à quelques pas de l\'île d\'Ortigia et des principaux monuments. Ce guide vous aidera à vous orienter pendant votre séjour.',
+            es: 'Heliopolis es una acogedora residencia situada en el centro histórico de Siracusa, a pocos pasos de la isla de Ortigia y de los principales monumentos. Esta guía le ayudará a orientarse durante su estancia.'
         }
     },
     checkin: {
@@ -307,10 +307,10 @@ const T = {
             es: '¿Necesita ayuda? Contáctenos:'
         },
         footer: {
-            it: 'Vi aspettiamo! — Maison Heliopolis, Siracusa',
-            en: 'We look forward to welcoming you! — Maison Heliopolis, Syracuse',
-            fr: 'Nous vous attendons ! — Maison Heliopolis, Syracuse',
-            es: '¡Les esperamos! — Maison Heliopolis, Siracusa'
+            it: 'Vi aspettiamo! — Heliopolis, Siracusa',
+            en: 'We look forward to welcoming you! — Heliopolis, Syracuse',
+            fr: 'Nous vous attendons ! — Heliopolis, Syracuse',
+            es: '¡Les esperamos! — Heliopolis, Siracusa'
         }
     },
     cookie: {
