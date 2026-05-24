@@ -6,21 +6,21 @@
 
 :root {
   /* Colors */
-  --cream: #F5F0E8;
-  --cream-light: #FAF7F2;
-  --beige: #D9D2C0;
-  --beige-dark: #C4B9A3;
-  --gold: #C4A35A;
-  --gold-light: #D4B96A;
-  --charcoal: #2C2C2C;
-  --charcoal-light: #3A3A3A;
-  --text-muted: #5A5044;
+  --cream: #FDFAE0;
+  --cream-light: #FEFCEC;
+  --beige: #EDE880;
+  --beige-dark: #C8C040;
+  --gold: #3A6818;
+  --gold-light: #528A28;
+  --charcoal: #1A2E08;
+  --charcoal-light: #2A4010;
+  --text-muted: #3A5820;
   --rose: #8CB840;
   --rose-light: #B8D870;
   --rose-pale: #E5F2C0;
-  --sage: #8B9E7E;
-  --sage-light: #A8B89D;
-  --olive: #6B7B5E;
+  --sage: #2D6020;
+  --sage-light: #4A8035;
+  --olive: #1A4A10;
   --white: #FFFFFF;
   --shadow-soft: 0 2px 20px rgba(44, 44, 44, 0.06);
   --shadow-medium: 0 4px 30px rgba(44, 44, 44, 0.1);
