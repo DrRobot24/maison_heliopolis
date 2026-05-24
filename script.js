@@ -620,10 +620,10 @@ document.addEventListener('DOMContentLoaded', () => {
     </svg>`;
 
     const WELCOME = {
-      it: 'Ciao! 😄 Sono Cicciobot, il vostro concierge virtuale. Ortigia la conosco palmo a palmo — chiedetemi pure tutto!',
-      en: 'Hey there! 😄 I\'m Cicciobot, your virtual concierge. I know Ortigia like the back of my hand — ask me anything!',
-      fr: 'Salut ! 😄 Je suis Cicciobot, votre concierge virtuel. Je connais Ortigia comme ma poche — posez-moi toutes vos questions !',
-      es: '¡Hola! 😄 Soy Cicciobot, su concierge virtual. Conozco Ortigia como la palma de mi mano — ¡pregúntenme lo que quieran!'
+      it: 'Ciao! 😄 Sono Cicciobot, il vostro concierge virtuale. Siracusa la conosco come le mie tasche — chiedetemi quello che volete!',
+      en: 'Hey there! 😄 I\'m Cicciobot, your virtual concierge. I know Syracuse like the back of my hand — ask me anything!',
+      fr: 'Salut ! 😄 Je suis Cicciobot, votre concierge virtuel. Je connais Syracuse comme ma poche — posez-moi toutes vos questions !',
+      es: '¡Hola! 😄 Soy Cicciobot, su concierge virtual. Conozco Siracusa como la palma de mi mano — ¡pregúntenme lo que quieran!'
     };
     // ?',
       //🌹
