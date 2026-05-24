@@ -1,5 +1,5 @@
 /* ============================================
-   La Maison de Tante Rose — Design System
+   Heliopolis — Design System
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
@@ -15,9 +15,9 @@
   --charcoal: #2C2C2C;
   --charcoal-light: #3A3A3A;
   --text-muted: #5A5044;
-  --rose: #C4848A;
-  --rose-light: #E8B4B8;
-  --rose-pale: #F0D4D8;
+  --rose: #8CB840;
+  --rose-light: #B8D870;
+  --rose-pale: #E5F2C0;
   --sage: #8B9E7E;
   --sage-light: #A8B89D;
   --olive: #6B7B5E;
