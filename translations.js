@@ -33,10 +33,10 @@ const T = {
             es: 'Estamos encantados de darles la bienvenida a nuestra casa de vacaciones'
         },
         text: {
-            it: 'La Maison de tante Rosa è un\'accogliente dimora situata nel centro storico di Siracusa, a pochi passi dall\'isola di Ortigia e dai principali monumenti. Questa guida vi aiuterà ad orientarvi durante il vostro soggiorno.',
-            en: 'La Maison de tante Rosa is a cozy residence located in the historic center of Syracuse, just steps from the island of Ortigia and the main monuments. This guide will help you navigate your stay.',
-            fr: 'La Maison de tante Rosa est une résidence chaleureuse située dans le centre historique de Syracuse, à quelques pas de l\'île d\'Ortigia et des principaux monuments. Ce guide vous aidera à vous orienter pendant votre séjour.',
-            es: 'La Maison de tante Rosa es una acogedora residencia situada en el centro histórico de Siracusa, a pocos pasos de la isla de Ortigia y de los principales monumentos. Esta guía le ayudará a orientarse durante su estancia.'
+            it: 'Maison Heliopolis è un\'accogliente dimora situata nel centro storico di Siracusa, a pochi passi dall\'isola di Ortigia e dai principali monumenti. Questa guida vi aiuterà ad orientarvi durante il vostro soggiorno.',
+            en: 'Maison Heliopolis is a cozy residence located in the historic center of Syracuse, just steps from the island of Ortigia and the main monuments. This guide will help you navigate your stay.',
+            fr: 'Maison Heliopolis est une résidence chaleureuse située dans le centre historique de Syracuse, à quelques pas de l\'île d\'Ortigia et des principaux monuments. Ce guide vous aidera à vous orienter pendant votre séjour.',
+            es: 'Maison Heliopolis es una acogedora residencia situada en el centro histórico de Siracusa, a pocos pasos de la isla de Ortigia y de los principales monumentos. Esta guía le ayudará a orientarse durante su estancia.'
         }
     },
     checkin: {
@@ -47,43 +47,55 @@ const T = {
             fr: 'Suivez ces étapes simples pour accéder à votre chambre',
             es: 'Siga estos sencillos pasos para acceder a su habitación'
         },
-        roomRosa: 'Chambre Rosa',
-        roomVerte: 'Chambre Verte',
         step1title: {
-            it: 'Avvisate il vostro arrivo', en: 'Notify your arrival',
-            fr: 'Annoncez votre arrivée', es: 'Notifique su llegada'
+            it: 'Arrivate al civico', en: 'Arrive at the building',
+            fr: 'Arrivez au numéro civil', es: 'Llegue al número'
         },
         step1text: {
-            it: 'L\'indirizzo è <strong>Via Bainsizza 100</strong>. Al momento dell\'arrivo davanti alla porta della camera, avvisate per messaggio al <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. La porta si aprirà in automatico.',
-            en: 'The address is <strong>Via Bainsizza 100</strong>. Upon arrival in front of the room door, notify by message to <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. The door will open automatically.',
-            fr: 'L\'adresse est <strong>Via Bainsizza 100</strong>. À votre arrivée devant la porte de la chambre, prévenez par message au <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. La porte s\'ouvrira automatiquement.',
-            es: 'La dirección es <strong>Via Bainsizza 100</strong>. Al llegar frente a la puerta de la habitación, avise por mensaje al <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. La puerta se abrirá automáticamente.'
-        },
-        verte_step1text: {
-            it: 'L\'indirizzo è <strong>Via Bainsizza 98</strong>. Al momento dell\'arrivo davanti alla porta della camera, avvisate per messaggio al <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. La porta si aprirà in automatico.',
-            en: 'The address is <strong>Via Bainsizza 98</strong>. Upon arrival in front of the room door, notify by message to <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. The door will open automatically.',
-            fr: 'L\'adresse est <strong>Via Bainsizza 98</strong>. À votre arrivée devant la porte de la chambre, prévenez par message au <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. La porte s\'ouvrira automatiquement.',
-            es: 'La dirección es <strong>Via Bainsizza 98</strong>. Al llegar frente a la puerta de la habitación, avise por mensaje al <a href="tel:+393517611469" class="phone-link">+39 351 761 1469</a>. La puerta se abrirá automáticamente.'
+            it: 'L\'indirizzo è <strong>Via Bainsizza 94</strong>. Per aprire il portone d\'ingresso, inserite il PIN nel tastierino. <strong>Il PIN vi verrà comunicato dall\'host via WhatsApp.</strong>',
+            en: 'The address is <strong>Via Bainsizza 94</strong>. To open the main entrance door, enter the PIN on the keypad. <strong>The PIN will be sent to you by the host via WhatsApp.</strong>',
+            fr: 'L\'adresse est <strong>Via Bainsizza 94</strong>. Pour ouvrir la porte d\'entrée principale, saisissez le PIN sur le clavier. <strong>Le PIN vous sera communiqué par l\'hôte via WhatsApp.</strong>',
+            es: 'La dirección es <strong>Via Bainsizza 94</strong>. Para abrir la puerta de entrada principal, introduzca el PIN en el teclado. <strong>El PIN le será comunicado por el anfitrión via WhatsApp.</strong>'
         },
         step2title: {
+            it: 'Avvisate l\'host', en: 'Notify the host',
+            fr: 'Prévenez l\'hôte', es: 'Avise al anfitrión'
+        },
+        step2text: {
+            it: 'Davanti alla porta della camera, mandate un messaggio WhatsApp al <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a>.',
+            en: 'In front of the room door, send a WhatsApp message to <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a>.',
+            fr: 'Devant la porte de la chambre, envoyez un message WhatsApp au <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a>.',
+            es: 'Frente a la puerta de la habitación, envíe un mensaje de WhatsApp al <a href="https://wa.me/393517611469" class="phone-link">+39 351 761 1469</a>.'
+        },
+        step3title: {
+            it: 'Trovate la vostra camera', en: 'Find your room',
+            fr: 'Trouvez votre chambre', es: 'Encuentre su habitación'
+        },
+        step3text: {
+            it: 'La camera è contrassegnata dal numero comunicato in precedenza dall\'host.',
+            en: 'The room is marked with the number previously communicated by the host.',
+            fr: 'La chambre est identifiée par le numéro communiqué au préalable par l\'hôte.',
+            es: 'La habitación está señalizada con el número comunicado previamente por el anfitrión.'
+        },
+        step4title: {
+            it: 'La porta si aprirà', en: 'The door will open',
+            fr: 'La porte s\'ouvrira', es: 'La puerta se abrirá'
+        },
+        step4text: {
+            it: 'La porta della camera si aprirà in automatico.',
+            en: 'The room door will open automatically.',
+            fr: 'La porte de la chambre s\'ouvrira automatiquement.',
+            es: 'La puerta de la habitación se abrirá automáticamente.'
+        },
+        step5title: {
             it: 'Attivate l\'elettricità', en: 'Activate electricity',
             fr: 'Activez l\'électricité', es: 'Active la electricidad'
         },
-        step2text: {
-            it: 'All\'interno della camera, sopra il tavolo troverete una card. La card deve essere inserita nell\'apposita tasca per dare alimentazione elettrica alla camera, come in foto:',
-            en: 'Inside the room, on the table you will find a card. The card must be inserted into the appropriate pocket to provide electricity to the room, as shown in the photo:',
-            fr: 'À l\'intérieur de la chambre, sur la table vous trouverez une carte. La carte doit être insérée dans la poche appropriée pour fournir l\'électricité à la chambre, comme sur la photo :',
-            es: 'Dentro de la habitación, sobre la mesa encontrará una tarjeta. La tarjeta debe insertarse en el bolsillo correspondiente para dar electricidad a la habitación, como se muestra en la foto:'
-        },
-        step3title: {
-            it: 'Accesso dall\'esterno', en: 'External access',
-            fr: 'Accès de l\'extérieur', es: 'Acceso desde el exterior'
-        },
-        step3text: {
-            it: 'La card apre la porta dall\'esterno, poggiandola sul supporto esterno come in foto:',
-            en: 'The card opens the door from the outside by placing it on the external support as shown in the photo:',
-            fr: 'La carte ouvre la porte de l\'extérieur en la plaçant sur le support externe comme sur la photo :',
-            es: 'La tarjeta abre la puerta desde el exterior colocándola en el soporte externo como se muestra en la foto:'
+        step5text: {
+            it: 'Inserite la card trovata in camera nell\'apposita tasca a muro per attivare l\'energia elettrica.',
+            en: 'Insert the card found in the room into the wall pocket to activate electricity.',
+            fr: 'Insérez la carte trouvée dans la chambre dans la pochette murale pour activer l\'électricité.',
+            es: 'Inserte la tarjeta encontrada en la habitación en el bolsillo de la pared para activar la electricidad.'
         }
     },
     checkout: {
@@ -109,7 +121,7 @@ const T = {
         items: [
             {
                 icon: '📶', title: { it: 'WiFi', en: 'WiFi', fr: 'WiFi', es: 'WiFi' },
-                desc: { it: 'Rete: <strong>La Maison de Tante Rosa</strong> — Password: <strong>tanterosa</strong>', en: 'Network: <strong>La Maison de Tante Rosa</strong> — Password: <strong>tanterosa</strong>', fr: 'Réseau : <strong>La Maison de Tante Rosa</strong> — Mot de passe : <strong>tanterosa</strong>', es: 'Red: <strong>La Maison de Tante Rosa</strong> — Contraseña: <strong>tanterosa</strong>' }
+                desc: { it: 'Rete: <strong>Heliopolis</strong> — Password: <strong>heliopolissr</strong>', en: 'Network: <strong>Heliopolis</strong> — Password: <strong>heliopolissr</strong>', fr: 'Réseau : <strong>Heliopolis</strong> — Mot de passe : <strong>heliopolissr</strong>', es: 'Red: <strong>Heliopolis</strong> — Contraseña: <strong>heliopolissr</strong>' }
             },
             {
                 icon: '🤫', title: { it: 'Silenzio', en: 'Quiet Hours', fr: 'Heures de Silence', es: 'Horas de Silencio' },
@@ -126,15 +138,6 @@ const T = {
             {
                 icon: '🔑', title: { it: 'Chiavi', en: 'Keys', fr: 'Clés', es: 'Llaves' },
                 desc: { it: 'Non dimenticate la card quando uscite!', en: 'Don\'t forget your card when going out!', fr: 'N\'oubliez pas votre carte en sortant !', es: '¡No olvide su tarjeta al salir!' }
-            },
-            {
-                icon: '🔒', title: { it: 'Cassaforte', en: 'Safe', fr: 'Coffre-Fort', es: 'Caja Fuerte' },
-                desc: {
-                    it: '<strong>Impostare il codice:</strong><br>1) Premere il pulsante rosso all\'interno della cassaforte<br>2) Digitare un nuovo codice (da 3 a 8 cifre)<br>3) Premere il simbolo della chiave e poi ENTER<br>4) Chiudere<br><br><strong>Per aprire:</strong> digitare il codice, premere il simbolo della chiave e ENTER',
-                    en: '<strong>Set the code:</strong><br>1) Press the red button inside the safe<br>2) Enter a new code (3 to 8 digits)<br>3) Press the key symbol and then ENTER<br>4) Close<br><br><strong>To open:</strong> enter the code, press the key symbol and ENTER',
-                    fr: '<strong>Configurer le code :</strong><br>1) Appuyez sur le bouton rouge à l\'intérieur du coffre<br>2) Saisissez un nouveau code (3 à 8 chiffres)<br>3) Appuyez sur le symbole de la clé puis ENTER<br>4) Fermez<br><br><strong>Pour ouvrir :</strong> saisissez le code, appuyez sur le symbole de la clé et ENTER',
-                    es: '<strong>Configurar el código:</strong><br>1) Pulse el botón rojo dentro de la caja fuerte<br>2) Introduzca un nuevo código (de 3 a 8 dígitos)<br>3) Pulse el símbolo de la llave y luego ENTER<br>4) Cierre<br><br><strong>Para abrir:</strong> introduzca el código, pulse el símbolo de la llave y ENTER'
-                }
             },
             {
                 icon: '💇', title: { it: 'Phon', en: 'Hair Dryer', fr: 'Sèche-Cheveux', es: 'Secador de Pelo' },
@@ -304,10 +307,10 @@ const T = {
             es: '¿Necesita ayuda? Contáctenos:'
         },
         footer: {
-            it: 'Vi aspettiamo! — La Maison de tante Rosa, Siracusa',
-            en: 'We look forward to welcoming you! — La Maison de tante Rosa, Syracuse',
-            fr: 'Nous vous attendons ! — La Maison de tante Rosa, Syracuse',
-            es: '¡Les esperamos! — La Maison de tante Rosa, Siracusa'
+            it: 'Vi aspettiamo! — Maison Heliopolis, Siracusa',
+            en: 'We look forward to welcoming you! — Maison Heliopolis, Syracuse',
+            fr: 'Nous vous attendons ! — Maison Heliopolis, Syracuse',
+            es: '¡Les esperamos! — Maison Heliopolis, Siracusa'
         }
     },
     cookie: {

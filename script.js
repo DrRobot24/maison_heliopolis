@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Mode detection from URL ----
   const urlParams = new URLSearchParams(window.location.search);
   const checkinRoom = urlParams.get('checkin'); // 'rosa', 'verte', or null
-  const isCheckinMode = (checkinRoom === 'rosa' || checkinRoom === 'verte');
+  const isCheckinMode = checkinRoom !== null;
 
   // SVG Icons
   const SVG = {
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // Auto-detect language
-  const saved = localStorage.getItem('tanterose_lang');
+  const saved = localStorage.getItem('heliopolis_lang');
   if (saved && ['it', 'en', 'fr', 'es'].includes(saved)) currentLang = saved;
   else {
     const bl = navigator.language.slice(0, 2);
@@ -106,9 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function t(obj) { return obj[currentLang] || obj['en'] || ''; }
 
   function roomDisplayName(room) {
-    if (room === 'rosa') return '🌹 Chambre Rosa';
-    if (room === 'verte') return '🌿 Chambre Verte';
-    return '';
+    return room ? `Camera ${room}` : '';
   }
 
   // ---- Route to correct mode ----
@@ -124,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ================================================================
   function renderCheckinLanding() {
     const app = document.getElementById('app');
-    document.title = `Check-in — ${roomDisplayName(checkinRoom)} — La Maison de tante Rosa`;
+    document.title = `Check-in — Maison Heliopolis`;
 
     app.innerHTML = `
     <div class="checkin-landing">
@@ -132,8 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="checkin-landing__corner checkin-landing__corner--br">${SVG.corner}</div>
 
       <div class="checkin-landing__card">
-        <img src="public/logo.jpeg" alt="La Maison de tante Rosa" class="checkin-landing__logo">
-        <div class="checkin-landing__brand">La Maison de tante Rosa</div>
+        <img src="public/logo_heliopolis.jpeg" alt="Maison Heliopolis" class="checkin-landing__logo">
+        <div class="checkin-landing__brand">Maison Heliopolis</div>
         <div class="checkin-landing__room-badge">${roomDisplayName(checkinRoom)}</div>
         <h1 class="checkin-landing__title">${t(T.checkin.title)}</h1>
         <p class="checkin-landing__subtitle">${t(T.checkin.subtitle)}</p>
@@ -156,8 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
 
       <footer class="checkin-landing__footer checkin-footer-dark">
-        <div class="footer-brand">La Maison de tante Rosa</div>
-        <div class="footer-cin">CIN: IT089017C2ZYR6XK4D</div>
+        <div class="footer-brand">Maison Heliopolis</div>
         <div class="footer-divider"></div>
         <p>${t(T.checkinLanding.footer)}</p>
         <div class="footer-divider"></div>
@@ -169,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.lang-btn-sm').forEach(btn => {
       btn.addEventListener('click', () => {
         currentLang = btn.dataset.setLang;
-        localStorage.setItem('tanterose_lang', currentLang);
+        localStorage.setItem('heliopolis_lang', currentLang);
         document.documentElement.lang = currentLang;
         renderCheckinLanding();
       });
@@ -210,10 +207,10 @@ document.addEventListener('DOMContentLoaded', () => {
     <!-- Navigation -->
     <nav class="nav" id="navbar">
       <div class="container">
-        <a href="#" class="nav-brand" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">La Maison de tante Rosa</a>
+        <a href="#" class="nav-brand" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Maison Heliopolis</a>
         <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
         <ul class="nav-links">
-          <li class="nav-mobile-brand"><span class="nav-mobile-rose">🌹</span><span>La Maison de tante Rosa</span></li>
+          <li class="nav-mobile-brand"><span class="nav-mobile-rose">☀️</span><span>Maison Heliopolis</span></li>
           <li><a href="#checkout">${t(T.nav.checkout)}</a></li>
           <li><a href="#rules">${t(T.nav.rules)}</a></li>
           <li><a href="#explore">${t(T.nav.explore)}</a></li>
@@ -231,12 +228,11 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="hero-corner hero-corner--bl">${SVG.corner}</div>
       <div class="hero-corner hero-corner--br">${SVG.corner}</div>
       <div class="hero-content">
-        <img src="public/logo.jpeg" alt="La Maison de tante Rosa" class="hero-logo">
+        <img src="public/logo_heliopolis.jpeg" alt="Maison Heliopolis" class="hero-logo">
         <p class="hero-eyebrow">${t(T.hero.eyebrow)}</p>
-        <h1>La Maison de tante Rosa</h1>
+        <h1>Maison Heliopolis</h1>
         <p class="hero-tagline">${t(T.hero.tagline)}</p>
         <div class="hero-location">${SVG.pin} ${t(T.hero.location)}</div>
-        <div class="hero-cin">CIN: IT089017C2ZYR6XK4D</div>
         <p class="section-subtitle" style="margin-bottom:20px">${t(T.hero.selectLang)}</p>
         <div class="lang-selector">
           <button class="lang-btn ${currentLang === 'it' ? 'active' : ''}" data-set-lang="it">🇮🇹 Italiano</button>
@@ -389,8 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <div class="footer-brand">La Maison de tante Rosa</div>
-        <div class="footer-cin">CIN: IT089017C2ZYR6XK4D</div>
+        <div class="footer-brand">Maison Heliopolis</div>
         <div class="footer-divider"></div>
         <p>${t(T.footer.madeWith)}</p>
         <div class="footer-divider"></div>
@@ -418,7 +413,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <button class="legal-modal-close">&times;</button>
         <h2>${t(T.cookie.privacyTitle)}</h2>
         <div class="legal-modal-body">
-          <p><strong>Titolare del trattamento:</strong> La Maison de tante Rosa — Via Bainsizza 100, 96100 Siracusa (SR), Italia.</p>
+          <p><strong>Titolare del trattamento:</strong> Maison Heliopolis — Via Bainsizza 94, 96100 Siracusa (SR), Italia.</p>
           <p><strong>Dati raccolti:</strong> Il sito non raccoglie dati personali direttamente. Tuttavia, servizi di terze parti incorporati (Google Maps) possono raccogliere dati di navigazione, indirizzo IP e cookie tecnici.</p>
           <p><strong>Finalità:</strong> I dati trattati dai servizi terzi sono utilizzati esclusivamente per il funzionamento della mappa interattiva e per migliorare l'esperienza di navigazione.</p>
           <p><strong>Base giuridica:</strong> Legittimo interesse (Art. 6, par. 1, lett. f GDPR) per i cookie tecnici; consenso (Art. 6, par. 1, lett. a GDPR) per i cookie di terze parti.</p>
@@ -439,8 +434,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <p><strong>Cosa sono i cookie:</strong> I cookie sono piccoli file di testo memorizzati dal browser per garantire il funzionamento del sito e ricordare le preferenze dell'utente.</p>
           <p><strong>Cookie tecnici (necessari):</strong></p>
           <ul>
-            <li><code>tanterose_lang</code> — Salva la lingua selezionata (localStorage). Durata: persistente.</li>
-            <li><code>tanterose_cookie</code> — Registra il consenso ai cookie. Durata: 365 giorni.</li>
+            <li><code>heliopolis_lang</code> — Salva la lingua selezionata (localStorage). Durata: persistente.</li>
+            <li><code>heliopolis_cookie</code> — Registra il consenso ai cookie. Durata: 365 giorni.</li>
           </ul>
           <p><strong>Cookie di terze parti:</strong></p>
           <ul>
@@ -460,35 +455,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ---- Steps renderer (used by check-in landing) ----
+  // Photo mapping: 01+02 = main entrance PIN, 03 = electricity card, 04 = room number, 05 = automatic door
   function renderSteps(room) {
-    const prefix = (room === 'verte') ? 'verte_' : '';
-
-    const step1title = T.checkin[prefix + 'step1title'] || T.checkin.step1title;
-    const step1text  = T.checkin[prefix + 'step1text']  || T.checkin.step1text;
-    const step2title = T.checkin[prefix + 'step2title'] || T.checkin.step2title;
-    const step2text  = T.checkin[prefix + 'step2text']  || T.checkin.step2text;
-    const step3title = T.checkin[prefix + 'step3title'] || T.checkin.step3title;
-    const step3text  = T.checkin[prefix + 'step3text']  || T.checkin.step3text;
-
-    // Photo paths per room
-    // rosa2/verte2 = internal (electricity card pocket), rosa1/verte1 = external (door access)
-    const photos = {
-      rosa: { step2: 'public/rosa%202.jpeg', step3: 'public/rosa%201.jpeg' },
-      verte: { step2: 'public/verte%202.jpeg', step3: 'public/verte1.jpeg' }
-    };
-    const roomPhotos = photos[room] || photos.rosa;
-
     return [
-      { n: 1, title: t(step1title), text: t(step1text), img: null },
-      { n: 2, title: t(step2title), text: t(step2text), img: roomPhotos.step2 },
-      { n: 3, title: t(step3title), text: t(step3text), img: roomPhotos.step3 }
+      { n: 1, title: t(T.checkin.step1title), text: t(T.checkin.step1text), imgs: ['public/01.jpeg', 'public/02.jpeg'] },
+      { n: 2, title: t(T.checkin.step2title), text: t(T.checkin.step2text), imgs: [] },
+      { n: 3, title: t(T.checkin.step3title), text: t(T.checkin.step3text), imgs: ['public/04.jpeg'] },
+      { n: 4, title: t(T.checkin.step4title), text: t(T.checkin.step4text), imgs: ['public/05.jpeg'] },
+      { n: 5, title: t(T.checkin.step5title), text: t(T.checkin.step5text), imgs: ['public/03.jpeg'] }
     ].map(s => `
       <div class="step">
         <div class="step-number">${s.n}</div>
         <div class="step-content">
           <h4>${s.title}</h4>
           <p>${s.text}</p>
-          ${s.img ? `<img src="${s.img}" alt="Step ${s.n}" class="step-photo">` : ''}
+          ${s.imgs.map(img => `<img src="${img}" alt="Step ${s.n}" class="step-photo">`).join('')}
         </div>
       </div>`).join('');
   }
@@ -499,7 +480,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         currentLang = btn.dataset.setLang;
-        localStorage.setItem('tanterose_lang', currentLang);
+        localStorage.setItem('heliopolis_lang', currentLang);
         document.documentElement.lang = currentLang;
         const scrollY = window.scrollY;
         renderMainSite();
@@ -578,11 +559,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Cookie banner
     const cookieBanner = document.getElementById('cookieBanner');
-    if (!localStorage.getItem('tanterose_cookie')) {
+    if (!localStorage.getItem('heliopolis_cookie')) {
       cookieBanner.style.display = '';
     }
     document.getElementById('cookieAccept').addEventListener('click', () => {
-      localStorage.setItem('tanterose_cookie', '1');
+      localStorage.setItem('heliopolis_cookie', '1');
       cookieBanner.style.display = 'none';
     });
 

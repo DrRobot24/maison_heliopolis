@@ -1,54 +1,61 @@
-# 🌹 La Maison de Tante Rose
+# Maison Heliopolis
 
-Landing page / guida digitale per gli ospiti della casa vacanze **La Maison de Tante Rose** a Siracusa, Sicilia.
+Landing page / guida digitale per gli ospiti di **Maison Heliopolis** a Siracusa, Sicilia.
 
-## 🌐 Lingue
+## Dati struttura
+
+- **Nome:** Maison Heliopolis
+- **Indirizzo:** Via Bainsizza 94, 96100 Siracusa (SR)
+- **Ospiti massimi:** 3
+- **Camera 1:** letto matrimoniale + lettino singolo
+- **Camera 2:** solo letto matrimoniale
+- **WiFi:** Rete `Heliopolis` — Password `heliopolissr`
+- **Host WhatsApp:** +39 351 761 1469
+
+## Lingue
 
 Italiano 🇮🇹 · English 🇬🇧 · Français 🇫🇷 · Español 🇪🇸
 
-La lingua viene rilevata automaticamente dal browser. L'ospite può cambiarla in qualsiasi momento.
+La lingua viene rilevata automaticamente dal browser.
 
-## 🔒 Accesso con PIN
+## Check-in (5 passi)
 
-La pagina è protetta da un codice di accesso. Per cambiare il PIN, modifica la **riga 2** di `translations.js`:
+1. Arrivare al civico Via Bainsizza 94 — inserire PIN portone (comunicato via WhatsApp)
+2. Mandare WhatsApp all'host davanti alla porta della camera
+3. La camera è contrassegnata dal numero comunicato in precedenza dall'host
+4. La porta della camera si aprirà in automatico
+5. Inserire la card in camera nella tasca a muro per attivare l'elettricità
 
-```js
-const ACCESS_PIN = '2026';  // ← cambia qui
-```
+## Foto check-in (cartella `public/`)
 
-Il QR code **non cambia mai** — solo il PIN. Comunicalo a voce o su un cartellino in casa.
+| File             | Contenuto                       |
+| ---------------- | ------------------------------- |
+| 01.jpeg, 02.jpeg | PIN porta d'ingresso principale |
+| 03.jpeg          | Card energia elettrica          |
+| 04.jpeg          | Numero camera                   |
+| 05.jpeg          | Porta automatica                |
 
-## 📋 Sezioni della pagina
+## Deploy
 
-| Sezione | Contenuto |
-|---------|-----------|
-| **Check-in** | Istruzioni ingresso Chambre Rosa / Chambre Verte (card, telefono) |
-| **Check-out** | Orario e procedura di uscita |
-| **Regole** | WiFi, silenzio, rifiuti, animali, no fumo |
-| **Esplora Siracusa** | Mappa Google + luoghi da visitare |
-| **Dove mangiare** | Ristoranti per categoria (tradizionale, pesce, pizza, colazione, fine dining) |
-| **Contatti utili** | Host, emergenze 112, taxi, ospedale |
+Sito 100% statico (HTML + CSS + JS). URL Vercel: `[URL_HELIOPOLIS]`
 
-## 🚀 Deploy
+1. **Vercel**: Collega la repo, deploy automatico dal branch `main`
+2. **GitHub Pages**: Settings → Pages → Deploy from branch `main` / `/ (root)`
 
-Sito 100% statico (HTML + CSS + JS). Opzioni:
+## File principali
 
-1. **GitHub Pages**: Settings → Pages → Deploy from branch `main` / `/ (root)`
-2. **Netlify / Vercel**: Collega la repo, deploy automatico
-3. **Qualsiasi hosting**: Carica i 4 file via FTP
-
-## 📁 File
-
-```
+```text
 index.html        → Shell HTML
-style.css          → Design system (palette beige/crema, font serif)
-translations.js    → Testi in 4 lingue + PIN
-script.js          → Rendering, lingua, animazioni
+style.css         → Design system
+translations.js   → Testi in 4 lingue
+script.js         → Rendering, lingua, animazioni, check-in
+api/chat.js       → Chatbot Ciccio (richiede ANTHROPIC_API_KEY)
+vercel.json       → Routing Vercel
 ```
 
-## ✏️ Personalizzazione rapida
+## Personalizzazione rapida
 
-- **Cambiare PIN** → riga 2 di `translations.js`
-- **Aggiungere un ristorante** → sezione `eat.categories` in `translations.js`
-- **Cambiare colori** → variabili CSS in cima a `style.css`
-- **Modificare contatti** → sezione `contacts.items` in `translations.js`
+- **WiFi** → `rules.items[0]` in `translations.js`
+- **Aggiungere ristorante** → sezione `eat.categories` in `translations.js`
+- **Contatti** → sezione `contacts.items` in `translations.js`
+- **Colori** → variabili CSS in cima a `style.css`
