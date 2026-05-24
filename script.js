@@ -250,6 +250,17 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="section-header reveal"><h2>${t(T.welcome.title)}</h2><p class="section-subtitle">${t(T.welcome.subtitle)}</p></div>
         <div class="reveal" style="max-width:750px;margin:0 auto;text-align:center"><p>${t(T.welcome.text)}</p></div>
         <div class="floral-divider">${SVG.rose}</div>
+
+        <!-- Cicciobot banner -->
+        <div class="cicciobot-banner reveal">
+          <div class="cicciobot-banner__lemon">🍋</div>
+          <div class="cicciobot-banner__body">
+            <div class="cicciobot-banner__name">Cicciobot</div>
+            <p class="cicciobot-banner__tagline">${t(T.cicciobot.tagline)}</p>
+          </div>
+          <button class="cicciobot-banner__btn" id="cicciobot-open-btn">${t(T.cicciobot.cta)}</button>
+        </div>
+
       </div>
     </section>
 
@@ -486,6 +497,11 @@ document.addEventListener('DOMContentLoaded', () => {
         renderMainSite();
         window.scrollTo(0, scrollY);
       });
+    });
+
+    // Cicciobot banner button → open chat
+    document.getElementById('cicciobot-open-btn')?.addEventListener('click', () => {
+      document.getElementById('chat-toggle')?.click();
     });
 
     // Scroll reveal

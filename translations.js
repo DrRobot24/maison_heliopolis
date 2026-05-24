@@ -277,6 +277,20 @@ const T = {
             { icon: '🩺', title: { it: 'Guardia Medica', en: 'Medical Guard', fr: 'Médecin de Garde', es: 'Guardia Médica' }, value: '+39 0931 484629', link: 'tel:+390931484629' }
         ]
     },
+    cicciobot: {
+        tagline: {
+            it: 'Hai domande su Siracusa? Sono disponibile 24/7 per rispondervi!',
+            en: 'Questions about Syracuse? Available 24/7 to answer anything!',
+            fr: 'Des questions sur Syracuse ? Disponible 24h/24 pour vous répondre !',
+            es: '¿Preguntas sobre Siracusa? ¡Disponible las 24 horas para responderle!'
+        },
+        cta: {
+            it: 'Chatta con me →',
+            en: 'Chat with me →',
+            fr: 'Discuter →',
+            es: 'Chatear →'
+        }
+    },
     footer: {
         madeWith: { it: 'Fatto con ❤️ a Siracusa', en: 'Made with ❤️ in Syracuse', fr: 'Fait avec ❤️ à Syracuse', es: 'Hecho con ❤️ en Siracusa' }
     },
